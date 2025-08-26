@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Food in Selangor</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="cookies.css">
+    <link rel="stylesheet" href="ContentStyle.css">
+    <link rel="stylesheet" href="general.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <!--Selangor Flag Favicon-->
+    <link rel="icon" type="image/png" href="https://i.pinimg.com/736x/c9/6f/47/c96f47503773d21c6541b3d862116725.jpg">
+    <!-- Define length of search bar -->
+    <style>
+        .search-container form {
+            width: 600px;
+            margin-bottom: 30px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- ===== Cookies ===== -->
+    <div id="welcomeFormContainer">
+        <h2>🍛 Welcome to Malaysia Street Food!</h2>
+        <p>Enter your name to explore Malaysia Street Food:</p>
+        <!-- Name -->
+        <input type="text" id="usernameInput" placeholder="Your name">
+        <!-- Gmail -->
+        <input type="email" id="gmailInput" placeholder="Your Gmail (example@gmail.com)">
+        <button id="continueBtn"> Start Tasting! </button>
+        <br><br>
+        <button id="skipBtn" style="background:#555; color:white;">Skip for Now</button>
+    </div>
+
+    <!-- 2️⃣ Actual Website (hidden until name is saved) -->
+    <div id="websiteContent" style="display:none;">
+
+        <!-- ===== HEADER ===== -->
+        <header>
+            <h1>About Malaysia Street Food</h1>
+            <p>Discover the flavors, stories, and culture behind every dish 🍜🌶️</p>
+        </header>
+
+        <!-- ===== NAVIGATION MENU ===== -->
+        <nav>
+            <ul class="nav-left">
+                <!-- Login / Logout button will be toggled with JS -->
+                <li><a href="explore.html" id="authBtn">Login</a></li>
+            </ul>
+            <ul>
+                <!-- Navigation links -->
+                <li class="dropdown">
+                    <a href="explore.html" class="active">Explore ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="Johor.html">Johor</a></li>
+                        <li><a href="Kedah.html">Kedah</a></li>
+                        <li><a href="Kelantan.html">Kelantan</a></li>
+                        <li><a href="Melaka.html">Melaka</a></li>
+                        <li><a href="Negeri Sembilan.html">Negeri Sembilan</a></li>
+                        <li><a href="Pahang.html">Pahang</a></li>
+                        <li><a href="Perak.html">Perak</a></li>
+                        <li><a href="Perlis.html">Perlis</a></li>
+                        <li><a href="Penang.html">Pulau Pinang</a></li>
+                        <li><a href="Selangor.html">Selangor</a></li>
+                        <li><a href="Terengganu.html">Terengganu</a></li>
+                        <li><a href="Sabah.html">Sabah</a></li>
+                        <li><a href="Sarawak.html">Sarawak</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Album.html">My Album</a></li>
+            </ul>
+
+            <!-- Social links aligned right -->
+            <ul class="nav-right">
+                <li><a href="https://facebook.com/sharer/sharer.php?u=https://yourwebsite.com" target="_blank"><i
+                            class="fab fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/intent/tweet?url=https://yourwebsite.com" target="_blank"><i
+                            class="fab fa-twitter"></i></a></li>
+                <li><a href="https://wa.me/?text=Check%20out%20this%20website:%20https://yourwebsite.com"
+                        target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+        </nav>
+
+
+        <!-- Mentioned Selangor Page-->
+        <div class="pageTitle">
+
+            <h2>Explore Selangor Street Food</h2>
+
+            <!-- 🔎 Search bar -->
+            <div class="search-container">
+                <form id="searchForm">
+                    <input type="text" placeholder="Search dishes/desserts/snacks..." name="search" id="searchInput">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- ===== MAIN FOOD SECTION ===== -->
+        <div class="sectionHeader">
+            <h2>Main Dishes</h2>
+        </div>
+
+
+        <div class="row">
+
+            <div class="column">
+
+                <img class="dish-image" src="https://asianinspirations.com.au/wp-content/uploads/2024/08/HKM-12.jpg"
+                    alt="Lontong image">
+
+                <p class="image-source"><small>Image source: Asian Inspirations Website</small></p>
+
+                <h3 class="foodName">Hokkien Mee</h3>
+
+                <p class="description">
+                    Hokkien Mee is a popular noodle dish from the Hokkien community. In Selangor and Kuala Lumpur, it is
+                    cooked with
+                    thick yellow noodles stir-fried in dark soy sauce along with pork, prawns, squid and crispy pork
+                    lard.
+                </p>
+
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/w8evENBHBuuB6UVN9">I Love Hokkien Mee</a>
+                </div>
+
+                <!-- ❤️ button and Save it into album-->
+                <button class="like-btn" data-food="Selangor Hokkien Mee"
+                    data-img="https://asianinspirations.com.au/wp-content/uploads/2024/08/HKM-12.jpg">❤️ Like & Collect
+                    to
+                    Album</button>
+
+            </div>
+
+            <div class="column">
+
+                <h3 class="foodName">Curry Laksa</h3>
+
+                <p class="description">
+                    Curry Laksa is a noodle soup made with a spicy coconut milk curry broth. It can be served with
+                    either
+                    yellow egg noodles or bee hoon or both, depending on your preference. The dish comes with tofu
+                    puffs,
+                    chicken, prawns, bean sprouts and boiled egg to make it rich and flavorful.
+                </p>
+
+                <img class="dish-image" src="https://www.malaymail.com/malaymail/uploads/images/2024/09/23/236291.jpg"
+                    alt="Laksa image">
+
+                <p class="image-source"><small>Image source: Malay Mail Website</small></p>
+
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/b8nDNpyt3GzFa84PA">Kedai Kopi Lai Foong</a>
+                </div>
+                <button class="like-btn" data-food="Curry Laksa"
+                    data-img="https://www.malaymail.com/malaymail/uploads/images/2024/09/23/236291.jpg">❤️ Like &
+                    Collect to
+                    Album</button>
+            </div>
+
+            <div class="column">
+
+                <img class="dish-image"
+                    src="https://myweekendplan.asia/wp-content/uploads/2023/02/Soon-Seng-Bak-Kut-Teh-1.jpg"
+                    alt="Bakuteh image">
+
+                <p class="image-source"><small>Image source: My Weekend Plan Website</small></p>
+
+                <h3 class="foodName">Bakuteh</h3>
+
+                <p class="description">
+                    Bak Kut Teh is a Chinese herbal soup made by simmering pork ribs with a blend of herbs, spices and
+                    garlic
+                    to create a rich and aromatic broth. It is often enjoyed with rice, fried dough sticks and sometimes
+                    served with tofu, mushrooms or vegetables.
+                </p>
+
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/wkbe7wEsB7tTX7B57">Hing Kee Bakuteh Restaurant</a>
+                </div>
+
+                <button class="like-btn" data-food="Bakuteh"
+                    data-img="https://myweekendplan.asia/wp-content/uploads/2023/02/Soon-Seng-Bak-Kut-Teh-1.jpg">❤️ Like
+                    &
+                    Collect to Album
+                </button>
+            </div>
+
+            <div class="column">
+
+                <h3 class="foodName">Mee Rebus Klang</h3>
+                <p class="description">
+                    Mee Rebus Klang is a noodle dish from Klang. It is served with thick yellow noodles in a spicy-sweet
+                    gravy made from potatoes, shrimp, and spices. It also usually garnished with boiled eggs, tofu and
+                    green
+                    onions.
+                </p>
+                <img class="dish-image" src="https://azhan.co/wp-content/uploads/2016/03/mee-rebus.jpg"
+                    alt="Mee Rebus image">
+                <p class="image-source"><small>Image source: Azhan.co Website</small></p>
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/KJQ6y98p1zqgw82v6">Warung Wak Sharif</a>
+                </div>
+
+                <button class="like-btn" data-food="Mee Rebus Klang"
+                    data-img="https://azhan.co/wp-content/uploads/2016/03/mee-rebus.jpg">❤️ Like & Collect to Album
+                </button>
+            </div>
+
+            <div class="column">
+
+                <img class="dish-image"
+                    src="https://www.satayputerakajang.com/wp-content/uploads/2025/03/Asset-1-1024x503.png"
+                    alt="Satay image">
+
+                <p class="image-source"><small>Image source: Satay Putra Kajang Website</small></p>
+
+                <h3 class="foodName">Satay Kajang</h3>
+
+                <p class="description">
+                    Satay Kajang is a famous supper dish from Kajang, Selangor. It is made of skewered meat, usually
+                    chicken, beef or lamb, marinated with spices and grilled over charcoal. The dish is served with
+                    peanut
+                    sauce, ketupat, onions and cucumber.
+                </p>
+
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/b8gPN2j6zhWHvFdR9">Restoran Sate Kajang Hj Samuri</a>
+                </div>
+
+                <button class="like-btn" data-food="Satay Kajang"
+                    data-img="https://www.satayputerakajang.com/wp-content/uploads/2025/03/Asset-1-1024x503.png">❤️ Like
+                    &
+                    Collect to Album
+                </button>
+            </div>
+
+            <div class="column">
+
+                <h3 class="foodName">Sha Ba</h3>
+                <p class="description">
+                    "Sha Ba" is a colloquial term for a peppery soup. It is usually made with pork belly and
+                    bittergourd.
+                    This dish is cherished for its balanced spicy, savory and slightly bitter flavors.
+                </p>
+                <img class="dish-image"
+                    src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq12f0AGs2cXhtTN6TNZliClrCdckXsnZzsVtp79JlF7zHjoXOBuH0X7k7q59YhSZSIUtXGwpS2CPt4w7RrAIDj4h-gHDH_73iUeGE1ihh53NcjDeOvTxC5H1yikS-E0XrIYZONtg=s1360-w1360-h1020-rw"
+                    alt="Sah Bah image">
+                <p class="image-source"><small>Image source: Sha Ba Banting's Google review</small></p>
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/nKFcWo4M3tuvx7Fz9">Sha Ba Banting</a>
+                </div>
+
+                <button class="like-btn" data-food="Sha Ba"
+                    data-img="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq12f0AGs2cXhtTN6TNZliClrCdckXsnZzsVtp79JlF7zHjoXOBuH0X7k7q59YhSZSIUtXGwpS2CPt4w7RrAIDj4h-gHDH_73iUeGE1ihh53NcjDeOvTxC5H1yikS-E0XrIYZONtg=s1360-w1360-h1020-rw">❤️
+                    Like & Collect to Album</button>
+
+            </div>
+
+
+
+        </div>
+
+        <!-- ===== DESSERT SECTION ===== -->
+        <div class="sectionHeader">
+            <h2>Desserts & Snacks</h2>
+        </div>
+
+        <div class="row">
+
+            <div class="column">
+
+                <h3 class="foodName">Sesame Ball</h3>
+                <img class="dish-image" src="https://rasamalaysia.com/wp-content/uploads/2023/01/sesame-balls.jpg"
+                    alt="Sesame Ball image">
+                <p class="image-source"><small>Image source: Rasa Malaysia Website</small></p>
+                <p class="description">
+                    <br>Sesame Ball is a snack made from glutinous rice flour filled with sweet paste such as red bean
+                    or
+                    mung
+                    bean. It is coated with sesame seeds and deep-fried until golden and crispy. The snack is loved for
+                    its
+                    crunchy exterior with soft and sweet filling.
+                </p>
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <p>Commonly found at supermarkets</p>
+                </div>
+
+                <button class="like-btn" data-food="Sesame Ball"
+                    data-img="https://rasamalaysia.com/wp-content/uploads/2023/01/sesame-balls.jpg">❤️ Like & Collect to
+                    Album</button>
+            </div>
+
+            <div class="column">
+                <h3 class="foodName">Cendol Durian</h3>
+
+                <img class="dish-image"
+                    src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrhO2_2F-99ui9fuInYs87U4YKCCutRj0rWDRDhX0AmbKuKPCv1TdWDb8hg61KYXymd4oGMEhYIpMo_3Mf1vxHNh-7b4ConryJ0OUq45wMXTflqDZjkqtyTS4a5IltaroZN6_E=s1360-w1360-h1020-rw"
+                    alt="Cendol Durian image">
+
+                <p class="image-source"><small>Image source: Cendol Durian Runtuh's Google Review</small></p>
+
+                <p class="description">
+                    <br>Cendol Durian is a popular Malaysian dessert made with green rice flour jelly, coconut milk,
+                    palm
+                    sugar
+                    syrup and topped with fresh durian. It is loved for its creamy texture with its rich and sweet
+                    durian
+                    flavor.
+                </p>
+
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/HaB5KmQbzJu4XqLN8">Cendol Durian Runtuh</a>
+                </div>
+
+                <button class="like-btn" data-food="Cendol Durian"
+                    data-img="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrhO2_2F-99ui9fuInYs87U4YKCCutRj0rWDRDhX0AmbKuKPCv1TdWDb8hg61KYXymd4oGMEhYIpMo_3Mf1vxHNh-7b4ConryJ0OUq45wMXTflqDZjkqtyTS4a5IltaroZN6_E=s1360-w1360-h1020-rw">❤️
+                    Like & Collect to Album
+                </button>
+            </div>
+        </div>
+
+
+        <!-- Search: script loads after the DOM is ready  -->
+        <!-- 📢 "No results" message -->
+        <p id="noResults" style="text-align:center; display:none; font-weight:bold; color:red;">
+            No results found.
+        </p>
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <h2>🔒 Login Required</h2>
+                <p>You must log in first to save items to your album!</p>
+                <button id="loginModalOkBtn">OK</button>
+            </div>
+        </div>
+
+        <!-- Logout Modal -->
+        <div id="logoutModal" class="modal">
+            <div class="modal-content">
+                <h2>Logged Out!</h2>
+                <p>You have successfully logged out. See you next time! 🍜</p>
+                <button id="modalOkBtn">OK</button>
+            </div>
+        </div>
+
+        <!-- Link external JS -->
+        <script src="ContentSearchFunc.js"></script>
+        <script src="AlbumFunc.js"></script>
+        <script src="cookies.js"></script>
+
+        <footer>
+            <p>&copy; ACKY Day Day Foddie. All rights reserved.</p>
+            <p>Some images are used for educational purposes only and are &copy; their respective copyright owners.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

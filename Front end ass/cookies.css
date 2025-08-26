@@ -1,0 +1,80 @@
+/* =======================
+   COOKIES SETTINGS
+   ======================= */
+
+/* Hide both initially */
+#welcomeFormContainer,
+#websiteContent {
+    display: none;
+}
+
+/* Welcome form */
+#welcomeFormContainer {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #ff9933, #ff6600);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    color: white;
+}
+
+#welcomeFormContainer h2 {
+    margin-bottom: 15px;
+}
+
+#welcomeFormContainer p {
+    margin-bottom: 20px;
+}
+
+#welcomeFormContainer input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+#welcomeFormContainer button {
+    padding: 10px 25px;
+    background: #ffcc66;
+    color: #333;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#welcomeFormContainer button:hover {
+    background: #ffb84d;
+}
+
+/* Main website content (hidden initially) */
+#websiteContent {
+    display: none;
+    text-align: center;
+}
+
+/* Error message style */
+.error-msg {
+    color: #ffdddd; /* light red for contrast on orange background */
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    text-align: left;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Input with error border */
+input.error {
+    border: 2px solid #ff4444;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
