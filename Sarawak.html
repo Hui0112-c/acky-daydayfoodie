@@ -20,11 +20,14 @@
     <!-- Define length of search bar -->
     <style>
         .search-container form {
-            width: 600px;
-            margin-bottom: 30px;
+            width: 100%;
+            /* full width of parent */
+            max-width: 600px;
+            /* caps at 600px on larger screens */
+            margin: 0 auto 30px;
+            /* centers it and adds bottom spacing */
         }
     </style>
-
 
 </head>
 
@@ -423,5 +426,6 @@
         </footer>
     </div>
 </body>
+
 
 </html>
