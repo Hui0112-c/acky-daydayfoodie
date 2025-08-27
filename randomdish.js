@@ -1,8 +1,6 @@
 $(document).ready(function () {
-  // Only show prompt if not dismissed in this session
-  if (!sessionStorage.getItem("dismissDishPrompt")) {
-    $("#dishPrompt").show();
 
+  function fetchRandomDish() {
     $.ajax({
       url: "https://www.themealdb.com/api/json/v1/1/filter.php?a=Malaysian",
       method: "GET",
@@ -26,9 +24,18 @@ $(document).ready(function () {
     });
   }
 
-  // Close button
-  $("#closePrompt").on("click", function () {
+  // Fetch the random dish regardless of prompt visibility
+  fetchRandomDish();
+
+  // Only show the prompt if not dismissed
+  if (!sessionStorage.getItem("dismissDishPrompt")) {
+    $("#dishPrompt").show();
+  }
+
+  // Close button hides the prompt but doesn't stop fetching data
+  $(document).on("click", "#closePrompt", function () {
     $("#dishPrompt").fadeOut();
     sessionStorage.setItem("dismissDishPrompt", "true");
   });
+
 });
