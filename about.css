@@ -42,11 +42,17 @@ section {
     margin-top: 30px;
 }
 
+.story-image {
+    position: relative; /* so .img-credit positions inside */
+    display: inline-block;
+}
+
 .story-image img {
     width: 100%;
     max-width: 300px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: block;
 }
 
 .about-story p {
@@ -83,7 +89,7 @@ section {
    ======================= */
 .fun-facts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* exactly 3 per row */
     gap: 20px;
     margin-top: 20px;
 }
@@ -156,5 +162,17 @@ section {
     .story-image img,
     .about-story p {
         max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .fun-facts-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .fun-facts-grid {
+        grid-template-columns: 1fr; /* 1 per row on mobile */
     }
 }
