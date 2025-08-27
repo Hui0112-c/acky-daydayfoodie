@@ -165,7 +165,9 @@ function validateInputs(name, email) {
     if (!email) {
         showError(emailInput, "⚠ Please enter your email.");
         valid = false;
-    } else if (!email.endsWith("@email.com")) {
+
+       //allows any standard email format
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         showError(emailInput, "⚠ Please enter a valid email address.");
         valid = false;
     } else removeError(emailInput);
@@ -231,3 +233,4 @@ if (skipBtn) {
         updateAuthUI();
     };
 }
+
