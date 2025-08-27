@@ -58,12 +58,6 @@ function loadAlbum() {
     removeBtn.innerHTML = '<i class="fas fa-trash-alt"></i> Remove';
     removeBtn.className = "remove-btn";
 
-    removeBtn.onclick = () => {
-      const updated = getUserAlbum().filter(f => f.name !== item.name);
-      saveUserAlbum(updated);
-      loadAlbum();
-    };
-
     li.appendChild(img);
     li.appendChild(caption);
     li.appendChild(removeBtn);
@@ -176,4 +170,48 @@ function showNotification(message, duration = 3500, type = "success") {
     }, 300);
   }, duration);
 }
+
+/* =======================
+   REMOVE CONFIRMATION MODAL
+======================= */
+document.addEventListener("DOMContentLoaded", () => {
+  const albumList = document.getElementById("albumList");
+  const removeModal = document.getElementById("removeConfirmModal");
+  const removeYes = document.getElementById("removeConfirmYes");
+  const removeCancel = document.getElementById("removeConfirmCancel");
+
+  let itemToRemove = null;
+
+  // Delegate remove button clicks
+  albumList.addEventListener("click", (e) => {
+    const btn = e.target.closest(".remove-btn");
+    if (!btn) return;
+
+    itemToRemove = btn.closest(".album-item");
+    removeModal.style.display = "flex"; // show confirmation modal
+  });
+
+  // Confirm removal
+  removeYes.onclick = () => {
+    if (itemToRemove) {
+      const itemName = itemToRemove.querySelector("p").textContent;
+      let album = getUserAlbum();
+      album = album.filter(f => f.name !== itemName);
+      saveUserAlbum(album);
+
+      itemToRemove.remove();
+      showNotification("🗑️ This dish has been removed from your album.", 3500, "success");
+      itemToRemove = null;
+    }
+    removeModal.style.display = "none";
+  };
+
+  // Cancel removal
+  removeCancel.onclick = () => {
+    removeModal.style.display = "none";
+    itemToRemove = null;
+  };
+});
+
+
 
