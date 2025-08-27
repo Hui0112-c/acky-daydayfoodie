@@ -30,7 +30,7 @@ const skipBtn = document.getElementById("skipBtn");
 function isLoggedIn() {
     return (
         (sessionStorage.getItem("username") || getCookie("username")) &&
-        (sessionStorage.getItem("gmail") || getCookie("gmail"))
+        (sessionStorage.getItem("email") || getCookie("email"))
     );
 }
 
@@ -41,7 +41,7 @@ function hasSkipped() {
 /* =======================
    UI UPDATE
 ======================= */
-function showWebsite(name, gmail) {
+function showWebsite(name, email) {
     if (formContainer) formContainer.style.display = "none";
     if (content) content.style.display = "block";
 
@@ -65,7 +65,7 @@ function updateAuthUI() {
             // Clear session + cookies
             sessionStorage.clear();
             clearCookie("username");
-            clearCookie("gmail");
+            clearCookie("email");
             clearCookie("skipped");
 
             //Clear redirect history immediately
@@ -117,8 +117,8 @@ function updateAuthUI() {
 function updateUI() {
     if (isLoggedIn()) {
         const name = sessionStorage.getItem("username") || getCookie("username");
-        const gmail = sessionStorage.getItem("gmail") || getCookie("gmail");
-        showWebsite(name, gmail);
+        const email = sessionStorage.getItem("email") || getCookie("email");
+        showWebsite(name, email);
 
         // Ensure album/history refreshes right after login
         if (typeof loadAlbum === "function") {
@@ -152,23 +152,23 @@ function removeError(input) {
     }
 }
 
-function validateInputs(name, gmail) {
+function validateInputs(name, email) {
     let valid = true;
     const nameInput = document.getElementById("usernameInput");
-    const gmailInput = document.getElementById("gmailInput");
+    const emailInput = document.getElementById("emailInput");
 
     if (!name) {
         showError(nameInput, "⚠ Please enter your name.");
         valid = false;
     } else removeError(nameInput);
 
-    if (!gmail) {
-        showError(gmailInput, "⚠ Please enter your Gmail.");
+    if (!email) {
+        showError(emailInput, "⚠ Please enter your email.");
         valid = false;
-    } else if (!gmail.endsWith("@gmail.com")) {
-        showError(gmailInput, "⚠ Please enter a valid Gmail address.");
+    } else if (!email.endsWith("@email.com")) {
+        showError(emailInput, "⚠ Please enter a valid email address.");
         valid = false;
-    } else removeError(gmailInput);
+    } else removeError(emailInput);
 
     return valid;
 }
@@ -195,14 +195,14 @@ window.onload = () => {
 if (button) {
     button.onclick = () => {
         const name = document.getElementById("usernameInput").value.trim();
-        const gmail = document.getElementById("gmailInput").value.trim();
+        const email = document.getElementById("emailInput").value.trim();
 
-        if (!validateInputs(name, gmail)) return;
+        if (!validateInputs(name, email)) return;
 
         sessionStorage.setItem("username", name);
-        sessionStorage.setItem("gmail", gmail);
+        sessionStorage.setItem("email", email);
         setCookie("username", name);
-        setCookie("gmail", gmail);
+        setCookie("email", email);
 
         //Check for redirect immediately after login
         const redirectPage = localStorage.getItem("redirectAfterLogin");
@@ -212,7 +212,7 @@ if (button) {
             return; // stop here so UI doesn’t flash
         }
 
-        showWebsite(name, gmail);
+        showWebsite(name, email);
         updateAuthUI();
         updateUI(); // refresh state
 
