@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Food in Johor</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="cookies.css">
+    <link rel="stylesheet" href="ContentStyle.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--Johor Flag Favicon-->
+    <link rel="icon" type="image/png" href="https://i.pinimg.com/1200x/bc/fa/45/bcfa45ded5edf8bff24f775f16475cae.jpg">
+
+    <!-- Define length of search bar -->
+    <style>
+        .search-container form {
+            width: 600px;
+            margin-bottom: 30px;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- ===== Cookies ===== -->
+    <div id="welcomeFormContainer">
+        <h2>🍛 Welcome to Malaysia Street Food!</h2>
+        <p>Enter your name to explore Malaysia Street Food:</p>
+        <!-- Name -->
+        <input type="text" id="usernameInput" placeholder="Your name">
+        <!-- Gmail -->
+        <input type="email" id="gmailInput" placeholder="Your Gmail (example@gmail.com)">
+        <button id="continueBtn"> Start Tasting! </button>
+        <br><br>
+        <button id="skipBtn" style="background:#555; color:white;">Skip for Now</button>
+    </div>
+
+    <!--Actual Website (hidden until name is saved) -->
+    <div id="websiteContent" style="display:none;">
+
+        <!-- ===== HEADER ===== -->
+        <header>
+            <h1>About Malaysia Street Food</h1>
+            <p>Discover the flavors, stories, and culture behind every dish 🍜🌶️</p>
+        </header>
+
+        <!-- ===== NAVIGATION MENU ===== -->
+        <nav>
+            <ul class="nav-left">
+                <!-- Login / Logout button will be toggled with JS -->
+                <li><a href="index.html" id="authBtn">Login</a></li>
+            </ul>
+            <ul>
+                <!-- Navigation links -->
+                <li class="dropdown">
+                    <a href="index.html" class="active">Explore ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="Johor.html">Johor</a></li>
+                        <li><a href="Kedah.html">Kedah</a></li>
+                        <li><a href="Kelantan.html">Kelantan</a></li>
+                        <li><a href="Melaka.html">Melaka</a></li>
+                        <li><a href="Negeri Sembilan.html">Negeri Sembilan</a></li>
+                        <li><a href="Pahang.html">Pahang</a></li>
+                        <li><a href="Perak.html">Perak</a></li>
+                        <li><a href="Perlis.html">Perlis</a></li>
+                        <li><a href="Penang.html">Pulau Pinang</a></li>
+                        <li><a href="Selangor.html">Selangor</a></li>
+                        <li><a href="Terengganu.html">Terengganu</a></li>
+                        <li><a href="Sabah.html">Sabah</a></li>
+                        <li><a href="Sarawak.html">Sarawak</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Album.html">My Album</a></li>
+            </ul>
+
+            <!-- Social links aligned right -->
+            <ul class="nav-right">
+                <li><a href="https://facebook.com/sharer/sharer.php?u= https://hui0112-c.github.io/acky-daydayfoodie/" target="_blank"><i
+                            class="fab fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/intent/tweet?url= https://hui0112-c.github.io/acky-daydayfoodie/" target="_blank"><i
+                            class="fab fa-twitter"></i></a></li>
+                <li><a href="https://wa.me/?text=Check%20out%20this%20website:%20 https://hui0112-c.github.io/acky-daydayfoodie/"
+                        target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+        </nav>
+
+
+        <!-- Mentioned Johor Page-->
+        <div class="pageTitle">
+
+            <h2>Explore Johor Street Food</h2>
+
+            <!--   Search bar -->
+            <div class="search-container">
+                <form id="searchForm">
+                    <input type="text" placeholder="Search dishes/desserts/snacks..." name="search" id="searchInput">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- ===== MAIN FOOD SECTION ===== -->
+        <div class="sectionHeader">
+            <h2>Main Dishes</h2>
+        </div>
+
+
+        <div class="row">
+
+            <div class="column">
+
+                <img class="dish-image"
+                    src="https://backyardfresh.sg/cdn/shop/articles/WhatsApp_Image_2022-09-15_at_10.49.27_AM_1_1200x1200.jpg?v=1663325104"
+                    alt="Lei Cha image">
+
+                <p class="image-source"><small>Image source: Pinterest</small></p>
+
+                <h3 class="foodName">Lei Cha</h3>
+
+                <p class="description">
+                    This dish has a healthy combination that tastes great,you’ll enjoy the mix of veggies in green
+                    broth,
+                    made from herbs and thus called Lei Cha – the Ground Tea.
+                    When you pour the broth over mixed vegetables and rice, and let them mix, the meal gets better with
+                    every second. This broth usually tastes minty.
+                    The combination with crunchy peanuts and cereals taste delicious and provide amusing variety of
+                    texture
+                    and aroma. Some people prefer consuming the broth and rice separately while others like to mix
+                    together.
+                </p>
+
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/xA5kaZoeLgEqgkzj9">Tai Hong Kopitiam (Austin Heights)</a>
+                </div>
+
+                <button class="like-btn" data-food="Lei Cha"
+                    data-img="https://backyardfresh.sg/cdn/shop/articles/WhatsApp_Image_2022-09-15_at_10.49.27_AM_1_1200x1200.jpg?v=1663325104">❤️
+                    Like & Collect to Album
+                </button>
+
+            </div>
+
+
+            <div class="column">
+
+                <h3 class="foodName">Laksa Johor</h3>
+
+                <p class="description">
+                    Laksa is a spicy noodle and Johor version uses spaghetti and has thicker gravy.
+                    It is a fine mixture of vegetables and spices blend well in savory and grainy gravy made from fish.
+                    Basic Laksa Johor will cost you around RM5, and additional meat, seafood or vegetables will give
+                    more
+                    variation and increase in price.
+                </p>
+
+                <img class="dish-image" src="https://gojohor.my/site/wp-content/uploads/2015/05/laksa-johor.jpg"
+                    alt="Laksa Johor image">
+
+                <p class="image-source"><small>Image source: Pinterest</small></p>
+
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/A8FMrXbhmXLrEXks7">Restoran Bumbu Asli</a>
+                </div>
+
+                <button class="like-btn" data-food="Laksa Johor"
+                    data-img="https://gojohor.my/site/wp-content/uploads/2015/05/laksa-johor.jpg">❤️
+                    Like & Collect to Album
+                </button>
+
+            </div>
+
+            <div class="column">
+
+                <img class="dish-image" src="https://gojohor.my/site/wp-content/uploads/2015/05/kway-chap.jpg"
+                    alt="Kway Chap image">
+
+                <p class="image-source"><small>Image source: Pinterest</small></p>
+
+                <h3 class="foodName">Kway Chap</h3>
+
+                <p class="description">
+                    Kway Chap comprises rice sheets in a soup with dark soy sauce as base.
+                    It is served with seasoned meat, vegetables, and hard-boiled eggs.
+                    Meat is prepared by braising in soy sauces, onions, garlic, sliced shallots, star anise, and dried
+                    chili
+                    pods.
+                </p>
+
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/puXu79NgyVd2XfpS7"> Kway Chap stall @ Multi Mart Restaurant</a>
+                </div>
+
+                <button class="like-btn" data-food="Kway Chap"
+                    data-img="https://gojohor.my/site/wp-content/uploads/2015/05/kway-chap.jpg">❤️
+                    Like & Collect to Album
+                </button>
+
+            </div>
+
+
+            <div class="column">
+
+                <h3 class="foodName">Mee Bandung Muar</h3>
+
+                <img class="dish-image" src="https://i.pinimg.com/1200x/ac/ad/3f/acad3fb695435942a4df5808f6aef360.jpg"
+                    alt="Mee Bandung Muar image">
+
+                <p class="image-source"><small>Image source: Pinterest</small></p>
+
+                <p class="description">
+                    <br>Originating from Muar, a town in Johor, this dish features yellow noodles in a thick,
+                    spicy-sweet
+                    gravy made with shrimp paste, dried prawns, and beef or chicken.
+                    It’s distinct from other Malaysian noodle dishes due to its tangy, prawn-heavy broth.
+                </p>
+
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/2hj69xC1q66xeT1m8">Mee Bandung Udang Galah Muo Ori</a>
+                </div>
+
+                <button class="like-btn" data-food="Mee Bandung Muar"
+                    data-img="https://i.pinimg.com/1200x/ac/ad/3f/acad3fb695435942a4df5808f6aef360.jpg">❤️
+                    Like & Collect to Album
+                </button>
+
+            </div>
+
+            <div class="column">
+
+
+                <h3 class="foodName">Fish Head Curry</h3>
+
+                <img class="dish-image" src="https://gojohor.my/site/wp-content/uploads/2015/05/fish-head-curry.jpg"
+                    alt="Fish Head Curry image">
+
+                <p class="image-source"><small>Image source: Pinterest</small></p>
+
+                <p class="description">
+                    <br>This is dish with a big red snapper head surrounded by tasty curry broth spiced with a mixture
+                    of
+                    herbs.
+                    Don’t be scared of a fish almost looking at you; this meal is delicious.
+                    You get some fried bean curd skin, lady fingers and long bean to go with the head, making the
+                    perfect
+                    mixture of tastes and texture.
+                    There are also some mild and sweeter versions to suit everyone’s taste.
+                </p>
+
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/PfbTtrNY5eFSNBQa9">Kam Long Restaurant</a>
+                </div>
+
+                <button class="like-btn" data-food="Fish Head Curry"
+                    data-img="https://gojohor.my/site/wp-content/uploads/2015/05/fish-head-curry.jpg">❤️
+                    Like & Collect to Album
+                </button>
+
+            </div>
+
+            <div class="column">
+
+                <h3 class="foodName">Roti Prada</h3>
+
+                <img class="dish-image" src="https://i.pinimg.com/1200x/71/c6/c9/71c6c907bfd258d65d9dc9bdad43f242.jpg"
+                    alt="Roti Prada image">
+
+                <p class="image-source"><small>Image source: Pinterest</small></p>
+
+                <p class="description">
+                    <br>This flat crispy yet soft “pancake” served with vegetables or meaty curry can be found
+                    everywhere in
+                    Johor.
+                    Kids prefer to dip it in sugar.
+                    There is a plain version, or one that is stuffed with cheese, onion or banana.
+                </p>
+
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/D4pKLbcdqYVrFqA68"> Restoran Selera Selatan</a>
+                </div>
+
+                <button class="like-btn" data-food="Roti Prada"
+                    data-img="https://i.pinimg.com/1200x/71/c6/c9/71c6c907bfd258d65d9dc9bdad43f242.jpg">❤️
+                    Like & Collect to Album
+                </button>
+
+            </div>
+        </div>
+
+        <!-- ===== DESSERT SECTION ===== -->
+        <div class="sectionHeader">
+            <h2>Desserts & Snacks</h2>
+        </div>
+
+        <div class="row">
+            <div class="column">
+
+
+                <h3 class="foodName">Otak-Otak</h3>
+
+                <img class="dish-image" src="https://i.pinimg.com/736x/70/7f/ee/707fee56fac73b4e95a196a891de73d3.jpg"
+                    alt="Otah Otah image">
+
+                <p class="image-source"><small>Image source: Pinterest</small></p>
+
+                <p class="description">
+                    <br>Otak-Otak is a combination of ground fish meat mixed with tapioca starch and spices wrapped in
+                    coconut or banana leaves. This is a common snack that goes well with other meals on the lunch or
+                    dinner
+                    table.
+                    The steamed Otak-Otakis normally wrapped in banana leaves but most people prefer the one with
+                    coconut
+                    leaves, as it is barbecued and ends up drier and with a more distinct smoky fish aroma.
+                </p>
+
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/h5vgt4PTqcHkX1DfA">Xiao Mei Otak-Otak</a>
+                </div>
+
+                <button class="like-btn" data-food="Otak-Otak"
+                    data-img="https://i.pinimg.com/736x/70/7f/ee/707fee56fac73b4e95a196a891de73d3.jpg">❤️
+                    Like & Collect to Album
+                </button>
+
+            </div>
+
+            <div class="column">
+
+
+                <h3 class="foodName">Namplawan Fruit Rojak</h3>
+
+                <img class="dish-image" src="https://i.pinimg.com/736x/b4/12/0c/b4120cd69085bff349e25b3572cd12ab.jpg"
+                    alt="Namplawan Fruit Rojak image">
+
+                <p class="image-source"><small>Image source: Pinterest</small></p>
+
+                <p class="description">
+                    <br>A Thai-inspired fruit rojak with sour fruits like green mango or guava, paired with a sweet,
+                    salty,
+                    spicy and umami sauce made from fish sauce, palm sugar, chili, and shrimp paste.
+                </p>
+
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <p>Commonly found at night markets</p>
+                </div>
+
+                <button class="like-btn" data-food="Namplawan Fruit Rojak"
+                    data-img="https://i.pinimg.com/736x/b4/12/0c/b4120cd69085bff349e25b3572cd12ab.jpg">❤️
+                    Like & Collect to Album
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Search: script loads after the DOM is ready  -->
+        <!-- "No results" message -->
+        <p id="noResults" style="text-align:center; display:none; font-weight:bold; color:red;">
+            No results found.
+        </p>
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <h2>🔒 Login Required</h2>
+                <p>You must log in first to save items to your album!</p>
+                <button id="loginModalOkBtn">OK</button>
+            </div>
+        </div>
+
+
+        <!-- Logout Modal -->
+        <div id="logoutModal" class="modal">
+            <div class="modal-content">
+                <h2>Logged Out!</h2>
+                <p>You have successfully logged out. See you next time! 🍜</p>
+                <button id="modalOkBtn">OK</button>
+            </div>
+        </div>
+
+        <!-- Link external JS -->
+        <script src="cookies.js"></script>
+        <script src="ContentSearchFunc.js"></script>
+        <script src="AlbumFunc.js"></script>
+
+
+        <footer>
+            <p>&copy; ACKY Day Day Foddie. All rights reserved.</p>
+            <p>Some images are used for educational purposes only and are &copy; their respective copyright owners.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

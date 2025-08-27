@@ -1,0 +1,136 @@
+/* =======================
+   ABOUT SETTINGS
+   ======================= */
+/* HEADER */
+header {
+    background: linear-gradient(rgba(255, 153, 51, 0.7), rgba(255, 102, 0, 0.7)),
+        url('https://d1msew97rp2nin.cloudfront.net/prodin/tntravel/blogthumbnail/10-must-try-street-foods-of-malaysia-for-food-lovers-28a5bccc-9ca7-4870-8725-95bb24532ff5.jpeg') center/cover no-repeat;
+    height: 220px;
+    padding: 50px;
+    text-align: center;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    /* vertically center text */
+    align-items: center;
+    overflow: hidden;
+    /* prevents content from overflowing */
+}
+
+/* MAIN CONTENT */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* ABOUT STORY */
+.about-story .story-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.story-image {
+    position: relative;
+    display: inline-block;
+}
+
+.story-image img {
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.about-story p {
+    max-width: 500px;
+    padding: 20px;
+    background: #fff5e6;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.img-credit {
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none; /* remove underline */
+    transition: background 0.3s ease;
+}
+
+.img-credit:hover {
+    background: rgba(255, 140, 0, 0.8); /* orange hover */
+}
+
+
+/* FUN FACTS */
+.fun-facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.fact {
+    background: #ffcc66;
+    padding: 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background 0.3s, opacity 0.8s, transform 0.8s;
+    text-align: center;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.fact:hover {
+    transform: translateY(-5px);
+    background: #ffb84d;
+}
+
+.fact.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CTA BUTTON */
+.btn-explore {
+    display: inline-block;
+    background: #ff6600;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-explore:hover {
+    background: #ff9933;
+}
+
+/* ANIMATE ON SCROLL */
+.animate-on-scroll, .fact {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+.animate-on-scroll.active, .fact.active {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Food in Melaka</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="cookies.css">
+    <link rel="stylesheet" href="ContentStyle.css">
+    <link rel="stylesheet" href="general.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!--Melaka Flag Favicon-->
+    <link rel="icon" type="image/png" href="https://i.pinimg.com/1200x/67/02/4d/67024d6b43439508725a0c7b9e50c188.jpg">
+
+    <!-- Define length of search bar -->
+    <style>
+        .search-container form {
+            width: 600px;
+            margin-bottom: 30px;
+        }
+    </style>
+
+</head>
+
+
+
+
+<body>
+
+    <!-- ===== Cookies ===== -->
+    <div id="welcomeFormContainer">
+        <h2>🍛 Welcome to Malaysia Street Food!</h2>
+        <p>Enter your name to explore Malaysia Street Food:</p>
+        <!-- Name -->
+        <input type="text" id="usernameInput" placeholder="Your name">
+        <!-- Gmail -->
+        <input type="email" id="gmailInput" placeholder="Your Gmail (example@gmail.com)">
+        <button id="continueBtn"> Start Tasting! </button>
+        <br><br>
+        <button id="skipBtn" style="background:#555; color:white;">Skip for Now</button>
+    </div>
+
+    <!-- Actual Website (hidden until name is saved) -->
+    <div id="websiteContent" style="display:none;">
+
+        <!-- ===== HEADER ===== -->
+        <header>
+            <h1>About Malaysia Street Food</h1>
+            <p>Discover the flavors, stories, and culture behind every dish 🍜🌶️</p>
+        </header>
+
+        <!-- ===== NAVIGATION MENU ===== -->
+        <nav>
+            <ul class="nav-left">
+                <!-- Login / Logout button will be toggled with JS -->
+                <li><a href="index.html" id="authBtn">Login</a></li>
+            </ul>
+            <ul>
+                <!-- Navigation links -->
+                <li class="dropdown">
+                    <a href="index.html" class="active">Explore ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="Johor.html">Johor</a></li>
+                        <li><a href="Kedah.html">Kedah</a></li>
+                        <li><a href="Kelantan.html">Kelantan</a></li>
+                        <li><a href="Melaka.html">Melaka</a></li>
+                        <li><a href="Negeri Sembilan.html">Negeri Sembilan</a></li>
+                        <li><a href="Pahang.html">Pahang</a></li>
+                        <li><a href="Perak.html">Perak</a></li>
+                        <li><a href="Perlis.html">Perlis</a></li>
+                        <li><a href="Penang.html">Pulau Pinang</a></li>
+                        <li><a href="Selangor.html">Selangor</a></li>
+                        <li><a href="Terengganu.html">Terengganu</a></li>
+                        <li><a href="Sabah.html">Sabah</a></li>
+                        <li><a href="Sarawak.html">Sarawak</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Album.html">My Album</a></li>
+            </ul>
+
+            <!-- Social links aligned right -->
+            <ul class="nav-right">
+                <li><a href="https://facebook.com/sharer/sharer.php?u= https://hui0112-c.github.io/acky-daydayfoodie/" target="_blank"><i
+                            class="fab fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/intent/tweet?url= https://hui0112-c.github.io/acky-daydayfoodie/" target="_blank"><i
+                            class="fab fa-twitter"></i></a></li>
+                <li><a href="https://wa.me/?text=Check%20out%20this%20website:%20 https://hui0112-c.github.io/acky-daydayfoodie/"
+                        target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+        </nav>
+
+
+        <!-- Mentioned Melaka Page-->
+        <div class="pageTitle">
+
+            <h2>Explore Melaka Street Food</h2>
+
+            <!--   Search bar -->
+            <div class="search-container">
+                <form id="searchForm">
+                    <input type="text" placeholder="Search dishes/desserts/snacks..." name="search" id="searchInput">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- ===== MAIN FOOD SECTION ===== -->
+        <div class="sectionHeader">
+            <h2>Main Dishes</h2>
+        </div>
+
+
+        <div class="row">
+
+            <div class="column">
+
+                <img class="dish-image" src="https://i.pinimg.com/1200x/aa/94/27/aa9427aef08a597432733cb84905d799.jpg"
+                    alt="Chicken Rice Balls image">
+
+                <p class="image-source"><small>Image source: Pinterest</small></p>
+
+                <h3 class="foodName">Chicken Rice Balls</h3>
+
+                <p class="description">
+                    A Melaka specialty, this dish features fragrant rice cooked in chicken stock, shaped into sticky
+                    balls,
+                    and served with steamed or roasted chicken and chili sauce.
+                </p>
+
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/Cey45wNGSZXos14h8">SMVKKK Hainan Chicken Rice Ball</a>
+                </div>
+
+                <button class="like-btn" data-food="Chicken Rice Balls"
+                    data-img="https://i.pinimg.com/1200x/aa/94/27/aa9427aef08a597432733cb84905d799.jpg">❤️
+                    Like & Collect to Album
+                </button>
+
+            </div>
+
+
+            <div class="column">
+
+                <h3 class="foodName">Nyonya Laksa</h3>
+
+                <p class="description">
+                    A spicy, creamy coconut noodle soup with prawns, tofu puffs, and fish balls, reflecting Peranakan
+                    heritage. It’s richer than Penang’s asam laksa.
+                </p>
+
+                <img class="dish-image" src="https://i.pinimg.com/736x/0f/fc/7c/0ffc7cde4d21fde9e1cf0da0f0e209d8.jpg"
+                    alt="Nyonya Laksa image">
+
+                <p class="image-source"><small>Image source: Pinterest</small></p>
+
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/9UZ6odgavXhc4Ex99">d’LEETcious Nyonya Laksa Empire</a>
+                </div>
+
+                <button class="like-btn" data-food="Nyonya Laksa"
+                    data-img="https://i.pinimg.com/736x/0f/fc/7c/0ffc7cde4d21fde9e1cf0da0f0e209d8.jpg">❤️
+                    Like & Collect to Album
+                </button>
+
+            </div>
+
+            <div class="column">
+
+                <img class="dish-image" src="https://i.pinimg.com/736x/9f/66/00/9f66008238db62bfa2b025c75ed2ac80.jpg"
+                    alt="Maggie Ketam image">
+
+                <p class="image-source"><small>Image source: Pinterest</small></p>
+
+                <h3 class="foodName">Oh Chien</h3>
+
+                <p class="description">
+                    Pan or wok-fried oyster and egg omelet is often cooked with spices or garnishes. It’s a traditional
+                    and
+                    beloved Hokkien-style street food.
+                </p>
+
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/waJCpzFW6EhSu6by9">Bunga Raya Fried Oyster @ Medan Makan Boon
+                        Leong</a>
+                </div>
+
+                <button class="like-btn" data-food="Oh Chien"
+                    data-img="https://i.pinimg.com/736x/9f/66/00/9f66008238db62bfa2b025c75ed2ac80.jpg">❤️
+                    Like & Collect to Album
+                </button>
+
+            </div>
+
+
+
+        </div>
+
+
+        <!-- ===== DESSERT SECTION ===== -->
+        <div class="sectionHeader">
+            <h2>Desserts & Snacks</h2>
+        </div>
+
+        <div class="row">
+
+
+            <div class="row">
+
+                <div class="column">
+
+                    <h3 class="foodName">Satay Celup</h3>
+
+                    <img class="dish-image"
+                        src="https://i.pinimg.com/736x/80/b8/bd/80b8bdc17757d409559fdc270f8c99ec.jpg"
+                        alt="Satay Celup image">
+
+                    <p class="image-source"><small>Image source: Pinterest</small></p>
+
+                    <p class="description">
+                        <br>A Melaka-exclusive dish where skewers of seafood, meat, vegetables, and fish balls are
+                        dipped
+                        into a boiling pot of spicy peanut-pineapple sauce, similar to hotpot.
+                    </p>
+
+                    <div class="restaurant-info">
+                        <span class="restaurant-emoji">🍽️</span>
+                        <a href="https://maps.app.goo.gl/XYrM8GGgXGV8CN5D9">Tai Zi Satay Celup </a>
+                    </div>
+
+                    <button class="like-btn" data-food="Satay Celup"
+                        data-img="https://i.pinimg.com/736x/80/b8/bd/80b8bdc17757d409559fdc270f8c99ec.jpg">❤️
+                        Like & Collect to Album
+                    </button>
+
+                </div>
+
+
+                <div class="column">
+
+
+                    <h3 class="foodName">Putu Piring</h3>
+
+                    <img class="dish-image"
+                        src="https://i.pinimg.com/736x/ab/e6/b7/abe6b774b41a6487157f7111f3b66198.jpg"
+                        alt="Putu Piring image">
+
+                    <p class="image-source"><small>Image source: Pinterest</small></p>
+
+                    <p class="description">
+                        <br>Steamed rice cakes filled with gula Melaka and topped with grated coconut, offering a
+                        sweet-salty balance.
+                    </p>
+
+                    <div class="restaurant-info">
+                        <span class="restaurant-emoji">🍽️</span>
+                        <a href="https://maps.app.goo.gl/HuKefFnJJDLeNEvV9">Putu Piring Melaka</a>
+                    </div>
+
+                    <button class="like-btn" data-food="Putu Piring"
+                        data-img="https://i.pinimg.com/736x/ab/e6/b7/abe6b774b41a6487157f7111f3b66198.jpg">❤️
+                        Like & Collect to Album
+                    </button>
+
+                </div>
+
+                <div class="column">
+
+                    <h3 class="foodName">Klebang Coconut Shake</h3>
+
+                    <img class="dish-image"
+                        src="https://i.pinimg.com/736x/29/52/76/29527668cc5815692f28a2ba2385a154.jpg"
+                        alt="Klebang Coconut Shake image">
+
+                    <p class="image-source"><small>Image source: Pinterest</small></p>
+
+                    <p class="description">
+                        <br>A refreshing blend of coconut water, flesh, and vanilla ice cream, perfect for Melaka’s
+                        heat.
+                    </p>
+
+                    <div class="restaurant-info">
+                        <span class="restaurant-emoji">🍽️</span>
+                        <a href="https://maps.app.goo.gl/cyuKCb5xZJyxBbrKA">Klebang Original Coconut Shake</a>
+                    </div>
+
+                    <button class="like-btn" data-food="Klebang Coconut Shake"
+                        data-img="https://i.pinimg.com/736x/29/52/76/29527668cc5815692f28a2ba2385a154.jpg">❤️
+                        Like & Collect to Album
+                    </button>
+
+                </div>
+
+                <div class="column">
+
+
+                    <h3 class="foodName">Cendol</h3>
+
+                    <img class="dish-image"
+                        src="https://i.pinimg.com/1200x/b6/7b/97/b67b97204d06c6f86ac8e7d7116ac41d.jpg"
+                        alt="Cendol image">
+
+                    <p class="image-source"><small>Image source: Pinterest</small></p>
+
+                    <p class="description">
+                        <br>A refreshing dessert of shaved ice, green pandan jelly, coconut milk, and gula Melaka (palm
+                        sugar).
+                        Variations include durian cendol for adventurous eaters.
+                    </p>
+
+                    <div class="restaurant-info">
+                        <span class="restaurant-emoji">🍽️</span>
+                        <a href="https://maps.app.goo.gl/B42JsWXp7kZ1tskF9">East and West Rendezvous</a>
+                    </div>
+
+                    <button class="like-btn" data-food="Cendol Melaka"
+                        data-img="https://i.pinimg.com/1200x/b6/7b/97/b67b97204d06c6f86ac8e7d7116ac41d.jpg">❤️
+                        Like & Collect to Album
+                    </button>
+
+                </div>
+
+                <div class="column">
+
+
+                    <h3 class="foodName">Popiah</h3>
+
+                    <img class="dish-image"
+                        src="https://i.pinimg.com/736x/ff/24/89/ff2489c1e46edc1f4d903e72e97c989a.jpg"
+                        alt="Popiah image">
+
+                    <p class="image-source"><small>Image source: Pinterest</small></p>
+
+                    <p class="description">
+                        <br>A fresh spring roll filled with jicama, carrots, eggs, tofu, and crispy pork lard, wrapped
+                        in a
+                        thin egg crepe with sweet and chili sauces.
+                        Melaka’s version often emphasizes pork lard for flavor.
+                    </p>
+
+                    <div class="restaurant-info">
+                        <span class="restaurant-emoji">🍽️</span>
+                        <a href="https://maps.app.goo.gl/XEf8bMzLY1MfZ52Y7">Poh Piah Lwee </a>
+                    </div>
+
+                    <button class="like-btn" data-food="Popiah"
+                        data-img="https://i.pinimg.com/736x/ff/24/89/ff2489c1e46edc1f4d903e72e97c989a.jpg">❤️
+                        Like & Collect to Album
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Search: script loads after the DOM is ready  -->
+        <!-- "No results" message -->
+        <p id="noResults" style="text-align:center; display:none; font-weight:bold; color:red;">
+            No results found.
+        </p>
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <h2>🔒 Login Required</h2>
+                <p>You must log in first to save items to your album!</p>
+                <button id="loginModalOkBtn">OK</button>
+            </div>
+        </div>
+
+        <!-- Logout Modal -->
+        <div id="logoutModal" class="modal">
+            <div class="modal-content">
+                <h2>Logged Out!</h2>
+                <p>You have successfully logged out. See you next time! 🍜</p>
+                <button id="modalOkBtn">OK</button>
+            </div>
+        </div>
+
+        <!-- Link external JS -->
+        <script src="ContentSearchFunc.js"></script>
+        <script src="AlbumFunc.js"></script>
+        <script src="cookies.js"></script>
+
+        <footer>
+            <p>&copy; ACKY Day Day Foddie. All rights reserved.</p>
+            <p>Some images are used for educational purposes only and are &copy; their respective copyright owners.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

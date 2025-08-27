@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malaysia Street Food</title>
+
+  <!-- External Style File -->
+  <link rel="stylesheet" href="general.css">
+  <link rel="stylesheet" href="cookies.css">
+  <link rel="stylesheet" href="explore.css">
+  <link rel="stylesheet" href="randomdish.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Load Font Awesome from CDN (Content Delivery Network) -->
+  <!-- This gives access to 2,000+ free icons (social media, UI icons, etc.) -->
+  <!-- Version 6.5.0 is used here; integrity and crossorigin are handled automatically by cdnjs -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+
+<body>
+  <!-- ===== Cookies ===== -->
+  <div id="welcomeFormContainer">
+    <h2>🍛 Welcome to Malaysia Street Food!</h2>
+    <p>Enter your name to explore Malaysia Street Food:</p>
+    <!-- Name -->
+    <input type="text" id="usernameInput" placeholder="Your name">
+    <!-- Gmail -->
+    <input type="email" id="gmailInput" placeholder="Your Gmail (example@gmail.com)">
+    <button id="continueBtn"> Start Tasting! </button>
+    <br><br>
+    <button id="skipBtn" style="background:#555; color:white;">Skip for Now</button>
+  </div>
+
+  <!-- Actual Website (hidden until name is saved) -->
+  <div id="websiteContent" style="display:none;">
+
+    <!-- ===== HEADER SECTION ===== -->
+    <header>
+      <h1>Malaysia Street Food</h1>
+      <!-- Greeting (cookies) -->
+      <p id="greeting">Hello, Guest!</p>
+      <p>Your street food adventure through Malaysia starts now! 🥢🌶️</p>
+    </header>
+
+    <!-- ===== NAVIGATION MENU ===== -->
+    <nav>
+      <ul class="nav-left">
+        <!-- Login / Logout button will be toggled with JS -->
+        <li><a href="index.html" id="authBtn">Login</a></li>
+      </ul>
+      <ul>
+        <!-- Navigation links -->
+        <li class="dropdown">
+          <a href="index.html" class="active">Explore ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="Johor.html">Johor</a></li>
+            <li><a href="Kedah.html">Kedah</a></li>
+            <li><a href="Kelantan.html">Kelantan</a></li>
+            <li><a href="Melaka.html">Melaka</a></li>
+            <li><a href="Negeri Sembilan.html">Negeri Sembilan</a></li>
+            <li><a href="Pahang.html">Pahang</a></li>
+            <li><a href="Perak.html">Perak</a></li>
+            <li><a href="Perlis.html">Perlis</a></li>
+            <li><a href="Penang.html">Pulau Pinang</a></li>
+            <li><a href="Selangor.html">Selangor</a></li>
+            <li><a href="Terengganu.html">Terengganu</a></li>
+            <li><a href="Sabah.html">Sabah</a></li>
+            <li><a href="Sarawak.html">Sarawak</a></li>
+          </ul>
+        </li>
+
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="Album.html">My Album</a></li>
+      </ul>
+
+      <!-- Social links aligned right -->
+      <ul class="nav-right">
+        <li><a href="https://facebook.com/sharer/sharer.php?u= https://hui0112-c.github.io/acky-daydayfoodie/" target="_blank"><i
+              class="fab fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/intent/tweet?url= https://hui0112-c.github.io/acky-daydayfoodie/" target="_blank"><i
+              class="fab fa-twitter"></i></a></li>
+        <li><a href="https://wa.me/?text=Check%20out%20this%20website:%20 https://hui0112-c.github.io/acky-daydayfoodie/" target="_blank"><i
+              class="fab fa-whatsapp"></i></a></li>
+      </ul>
+    </nav>
+
+    <!--   Search bar (sessionStorage)-->
+    <div class="search-container">
+      <form id="searchForm">
+        <input type="text" placeholder="Search state..." name="search" id="searchInput">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+
+    <!-- Random Dish Section -->
+    <div id="dishPrompt" class="dish-prompt">
+      <button id="closePrompt" class="close-btn">✖</button>
+      <h2>🍜 Recommended Malaysian Dish</h2>
+      <img id="dishImage" src="" alt="Malaysian Dish">
+      <h3 id="dishName">Loading...</h3>
+      <p id="dishInstructions">Fetching a delicious dish...</p>
+      <a id="dishLink" href="#" target="_blank" class="btn">🔗 View Recipe</a>
+    </div>
+
+    <!-- ===== MAIN GRID SECTION ===== -->
+    <div id="grid">
+      <!-- Each figure represents a Malaysian state -->
+      <a href="johor.html">
+        <figure>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Johor_Bahru_skyline_at_night.jpg" alt="Johor">
+          <figcaption>Johor</figcaption>
+        </figure>
+      </a>
+
+      <a href="Kedah.html">
+        <figure>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Menara_as.jpg/640px-Menara_as.jpg"
+            alt="Kedah">
+          <figcaption>Kedah</figcaption>
+        </figure>
+      </a>
+
+      <a href="Kelantan.html">
+        <figure>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Kelantan_Royal_Palace_Gate_-_panoramio.jpg/1200px-Kelantan_Royal_Palace_Gate_-_panoramio.jpg?20220314103741"
+            alt="Kelantan">
+          <figcaption>Kelantan</figcaption>
+        </figure>
+      </a>
+
+      <a href="Melaka.html">
+        <figure>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Melaka_stadhuys_red_house.jpg/640px-Melaka_stadhuys_red_house.jpg"
+            alt="Melaka">
+          <figcaption>Melaka</figcaption>
+        </figure>
+      </a>
+
+      <a href="Negeri Sembilan.html">
+        <figure>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Masjid_Sri_Sendayan%2C_Bandar_Sri_Sendayan%2C_Seremban.jpg/999px-Masjid_Sri_Sendayan%2C_Bandar_Sri_Sendayan%2C_Seremban.jpg?20250313104043"
+            alt="Negeri Sembilan">
+          <figcaption>Negeri Sembilan</figcaption>
+        </figure>
+      </a>
+
+      <a href="Pahang.html">
+        <figure>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Kuantan_-_view_of_Sultan_Ahmad_Shah_State_Mosque_from_Menara_188_at_blue_hour_-_May_2024.jpg/640px-Kuantan_-_view_of_Sultan_Ahmad_Shah_State_Mosque_from_Menara_188_at_blue_hour_-_May_2024.jpg"
+            alt="Pahang">
+          <figcaption>Pahang</figcaption>
+        </figure>
+      </a>
+
+      <a href="Perak.html">
+        <figure>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Ipoh_railway_station_2024,_Perak_Malaysia_04.jpg/640px-Ipoh_railway_station_2024,_Perak_Malaysia_04.jpg"
+            alt="Perak">
+          <figcaption>Perak</figcaption>
+        </figure>
+      </a>
+
+      <a href="Perlis.html">
+        <figure>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Masjid_terapung_kuala_perlis_cantik.jpg?20160324045415"
+            alt="Perlis">
+          <figcaption>Perlis</figcaption>
+        </figure>
+      </a>
+
+      <a href="Penang.html">
+        <figure>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Skyline_of_George_Town,_Penang_at_night_January_2025_02-01.jpg/640px-Skyline_of_George_Town,_Penang_at_night_January_2025_02-01.jpg"
+            alt="Pulau Pinang">
+          <figcaption>Pulau Pinang</figcaption>
+        </figure>
+      </a>
+
+      <a href="Selangor.html">
+        <figure>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Gombak_Selangor_Batu-Caves-01.jpg/640px-Gombak_Selangor_Batu-Caves-01.jpg"
+            alt="Selangor">
+          <figcaption>Selangor</figcaption>
+        </figure>
+      </a>
+
+      <a href="Terengganu.html">
+        <figure>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Kuala_Terengganu_-_drawbridge_at_sunrise_-_May_2024.jpg/1200px-Kuala_Terengganu_-_drawbridge_at_sunrise_-_May_2024.jpg?20250608064323"
+            alt="Terengganu">
+          <figcaption>Terengganu</figcaption>
+        </figure>
+      </a>
+
+      <a href="Sabah.html">
+        <figure>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/KotaKinabalu_Sabah_CityMosque-00.jpg/1200px-KotaKinabalu_Sabah_CityMosque-00.jpg?20161205232404"
+            alt="Sabah">
+          <figcaption>Sabah</figcaption>
+        </figure>
+      </a>
+
+      <a href="Sarawak.html">
+        <figure>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Kuching_Sarawak_Dewan-Undangan-Negeri-Sarawak-01.jpg/1200px-Kuching_Sarawak_Dewan-Undangan-Negeri-Sarawak-01.jpg?20170907211415"
+            alt="Sarawak">
+          <figcaption>Sarawak</figcaption>
+        </figure>
+      </a>
+    </div>
+
+
+    <!-- Search: script loads after the DOM is ready  -->
+    <!-- "No results" message -->
+    <p id="noResults" style="text-align:center; display:none; font-weight:bold; color:red;">
+      No results found.
+    </p>
+
+    <!-- ===== FOOTER SECTION ===== -->
+    <footer>
+      <p>&copy; ACKY Day Day Foddie. All rights reserved.</p>
+            <p>Some images are used for educational purposes only and are &copy; their respective copyright owners.</p>
+      <p style="color:white; text-align:center; font-size:0.8rem;">
+        Images from <a href="https://commons.wikimedia.org/" target="_blank" style="color:#ccc;">Wikimedia Commons</a> |
+        CC License
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- Load jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Logout Modal -->
+  <div id="logoutModal" class="modal">
+    <div class="modal-content">
+      <h2>Logged Out!</h2>
+      <p>You have successfully logged out. See you next time! 🍜</p>
+      <button id="modalOkBtn">OK</button>
+    </div>
+  </div>
+
+  <!-- ===== Link external javascript file ===== -->
+  <script src="exploresearch.js"></script>
+  <script src="cookies.js"></script>
+  <script src="randomdish.js"></script>
+  <script src="dropdownstate.js"></script>
+
+
+
+</body>
+
+</html>

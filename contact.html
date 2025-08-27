@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <!-- External Style File -->
+     <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="cookies.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Load Font Awesome from CDN (Content Delivery Network) -->
+    <!-- This gives access to 2,000+ free icons (social media, UI icons, etc.) -->
+    <!-- Version 6.5.0 is used here; integrity and crossorigin are handled automatically by cdnjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- ===== Cookies ===== -->
+    <div id="welcomeFormContainer">
+        <h2>🍛 Welcome to Malaysia Street Food!</h2>
+        <p>Enter your name to explore Malaysia Street Food:</p>
+        <!-- Name -->
+        <input type="text" id="usernameInput" placeholder="Your name">
+        <!-- Gmail -->
+        <input type="email" id="gmailInput" placeholder="Your Gmail (example@gmail.com)">
+        <button id="continueBtn"> Start Tasting! </button>
+        <br><br>
+        <button id="skipBtn" style="background:#555; color:white;">Skip for Now</button>
+    </div>
+
+    <!--  Actual Website (hidden until name is saved) -->
+    <div id="websiteContent" style="display:none;">
+
+        <!-- ===== HEADER SECTION ===== -->
+        <header>
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you. Fill out the form below or reach us through our contact details.</p>
+        </header>
+
+        <!-- ===== NAVIGATION MENU ===== -->
+        <nav>
+            <ul class="nav-left">
+                <!-- Login / Logout button will be toggled with JS -->
+                <li><a href="index.html" id="authBtn">Login</a></li>
+            </ul>
+            <ul>
+                <!-- Navigation links -->
+                <li class="dropdown">
+                    <a href="index.html">Explore ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="Johor.html">Johor</a></li>
+                        <li><a href="Kedah.html">Kedah</a></li>
+                        <li><a href="Kelantan.html">Kelantan</a></li>
+                        <li><a href="Melaka.html">Melaka</a></li>
+                        <li><a href="Negeri Sembilan.html">Negeri Sembilan</a></li>
+                        <li><a href="Pahang.html">Pahang</a></li>
+                        <li><a href="Perak.html">Perak</a></li>
+                        <li><a href="Perlis.html">Perlis</a></li>
+                        <li><a href="Penang.html">Pulau Pinang</a></li>
+                        <li><a href="Selangor.html">Selangor</a></li>
+                        <li><a href="Terengganu.html">Terengganu</a></li>
+                        <li><a href="Sabah.html">Sabah</a></li>
+                        <li><a href="Sarawak.html">Sarawak</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="Album.html">My Album</a></li>
+            </ul>
+
+            <!-- Social links aligned right -->
+            <ul class="nav-right">
+                <li><a href="https://facebook.com/sharer/sharer.php?u= https://hui0112-c.github.io/acky-daydayfoodie/" target="_blank"><i
+                            class="fab fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/intent/tweet?url= https://hui0112-c.github.io/acky-daydayfoodie/" target="_blank"><i
+                            class="fab fa-twitter"></i></a></li>
+                <li><a href="https://wa.me/?text=Check%20out%20this%20website:%20 https://hui0112-c.github.io/acky-daydayfoodie/"
+                        target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <!-- Contact Form -->
+            <section class="form-section">
+                <form id="contactForm">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..."
+                        required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+
+                <p id="formMessage"></p>
+            </section>
+
+            <!-- Contact Info -->
+            <section class="contact-info">
+                <h2>Our Contact Details</h2>
+                <p><strong>Email:</strong> info@example.com</p>
+                <p><strong>Phone:</strong> +60 123-456 789</p>
+                <p><strong>Address:</strong> Jalan Example 123, Kuala Lumpur, Malaysia</p>
+            </section>
+
+
+        </main>
+
+        <!-- Logout Modal -->
+        <div id="logoutModal" class="modal">
+            <div class="modal-content">
+                <h2>Logged Out!</h2>
+                <p>You have successfully logged out. See you next time! 🍜</p>
+                <button id="modalOkBtn">OK</button>
+            </div>
+        </div>
+
+        <script src="contact.js"></script>
+        <script src="cookies.js"></script>
+
+        <!-- ===== FOOTER SECTION ===== -->
+        <footer>
+            <p>&copy; ACKY Day Day Foddie. All rights reserved.</p>
+            <p>Some images are used for educational purposes only and are &copy; their respective copyright owners.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

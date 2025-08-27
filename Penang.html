@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Street Food in Penang</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="cookies.css">
+    <link rel="stylesheet" href="ContentStyle.css">
+    <link rel="stylesheet" href="general.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!--Penang Flag Favicon-->
+    <link rel="icon" type="image/png" href="https://i.pinimg.com/1200x/8d/7b/78/8d7b78ce280e156fac967e53ca669c0e.jpg">
+
+    <style>
+        .search-container form {
+            width: 600px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== Cookies ===== -->
+    <div id="welcomeFormContainer">
+        <h2>🍛 Welcome to Malaysia Street Food!</h2>
+        <p>Enter your name to explore Malaysia Street Food:</p>
+        <!-- Name -->
+        <input type="text" id="usernameInput" placeholder="Your name">
+        <!-- Gmail -->
+        <input type="email" id="gmailInput" placeholder="Your Gmail (example@gmail.com)">
+        <button id="continueBtn"> Start Tasting! </button>
+        <br><br>
+        <button id="skipBtn" style="background:#555; color:white;">Skip for Now</button>
+    </div>
+
+    <!-- Actual Website (hidden until name is saved) -->
+    <div id="websiteContent" style="display:none;">
+        <header>
+            <h1>About Malaysia Street Food</h1>
+            <p>Discover the flavors, stories, and culture behind every dish 🍜🌶️</p>
+        </header>
+
+        <!-- ===== NAVIGATION MENU ===== -->
+        <nav>
+            <ul class="nav-left">
+                <!-- Login / Logout button will be toggled with JS -->
+                <li><a href="index.html" id="authBtn">Login</a></li>
+            </ul>
+            <ul>
+                <!-- Navigation links -->
+                <li class="dropdown">
+                    <a href="index.html" class="active">Explore ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="Johor.html">Johor</a></li>
+                        <li><a href="Kedah.html">Kedah</a></li>
+                        <li><a href="Kelantan.html">Kelantan</a></li>
+                        <li><a href="Melaka.html">Melaka</a></li>
+                        <li><a href="Negeri Sembilan.html">Negeri Sembilan</a></li>
+                        <li><a href="Pahang.html">Pahang</a></li>
+                        <li><a href="Perak.html">Perak</a></li>
+                        <li><a href="Perlis.html">Perlis</a></li>
+                        <li><a href="Penang.html">Pulau Pinang</a></li>
+                        <li><a href="Selangor.html">Selangor</a></li>
+                        <li><a href="Terengganu.html">Terengganu</a></li>
+                        <li><a href="Sabah.html">Sabah</a></li>
+                        <li><a href="Sarawak.html">Sarawak</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Album.html">My Album</a></li>
+            </ul>
+
+            <!-- Social links aligned right -->
+            <ul class="nav-right">
+                <li><a href="https://facebook.com/sharer/sharer.php?u= https://hui0112-c.github.io/acky-daydayfoodie/" target="_blank"><i
+                            class="fab fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/intent/tweet?url= https://hui0112-c.github.io/acky-daydayfoodie/" target="_blank"><i
+                            class="fab fa-twitter"></i></a></li>
+                <li><a href="https://wa.me/?text=Check%20out%20this%20website:%20 https://hui0112-c.github.io/acky-daydayfoodie/"
+                        target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+        </nav>
+
+        <!-- Mentioned penang Page-->
+        <div class="pageTitle">
+
+            <h2>Explore Penang Street Food</h2>
+
+            <!--   Search bar -->
+            <div class="search-container">
+                <form id="searchForm">
+                    <input type="text" placeholder="Search dishes/desserts/snacks..." name="search" id="searchInput">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- ===== Main Food Section ===== -->
+        <div class="sectionHeader">
+            <h2>Main Dishes</h2>
+        </div>
+
+        <div class="row">
+
+            <div class="column">
+
+                <!--The image of food-->
+                <img class="dish-image"
+                    src="https://www.wokandskillet.com/wp-content/uploads/2016/07/Char-Kway-Teow.jpg"
+                    alt="Char Kway Teow image">
+
+                <!--Mentioned the copyright of image-->
+                <p class="image-source"><small>Image source: wokandskillet website</small></p>
+
+                <!--Food Name-->
+                <h3 clas="foodname">Char Kway Teow</h3>
+
+                <!--Introduce to this street food-->
+                <p class="description">
+                    This stir-fried noodle dish, featuring flat rice noodles (kway teow) alongside various ingredients
+                    like
+                    prawns, cockles, and Chinese sausage, is celebrated for its smoky, savory flavor imparted by the
+                    "wok
+                    hei".
+                </p>
+
+                <!--Recommended Restaurant-->
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/PUjWps4kHRSTC9r48">Siam Road Charcoal Char Kuey Teow</a>
+                </div>
+
+                <button class="like-btn" data-food="Penang Char Kway Teow"
+                    data-img="https://www.wokandskillet.com/wp-content/uploads/2016/07/Char-Kway-Teow.jpg">❤️ Like
+                    & Collect to Album
+                </button>
+
+            </div>
+
+
+            <div class="column">
+
+
+                <!--Food Name-->
+                <h3>Asam Laksa</h3>
+
+                <!--Introduce to this street food-->
+                <p class="description">
+                    Asam Laksa is a dish that serves as an ideal vessel for a well-balanced primary taste sensation. A
+                    sip
+                    of its rich and tangy fish broth opens the palate to sweet, sour, spicy, and savoury flavours.
+                </p>
+
+                <!--The image of food-->
+                <img class="dish-image"
+                    src="https://www.ajinomotofoodbizpartner.com.my/wp-content/uploads/2023/09/Penang-Asam-Laksa-thumbnail-03.jpg"
+                    alt="Asam Laksa image">
+
+                <!--Mentioned the copyright of image-->
+                <p class="image-source"><small>Image source: ajinomotofoodbizpartner website.</small></p>
+
+                <!--Recommended Restaurant-->
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/g8WfEqbU3k65LUS29">Laksalicious</a>
+
+                </div>
+                <button class="like-btn" data-food="Penang Asam Laksa"
+                    data-img="https://www.ajinomotofoodbizpartner.com.my/wp-content/uploads/2023/09/Penang-Asam-Laksa-thumbnail-03.jpg">❤️
+                    Like
+                    & Collect to Album
+                </button>
+
+            </div>
+
+
+            <div class="column">
+
+                <img class="dish-image"
+                    src="https://i0.wp.com/www.angsarap.net/wp-content/uploads/2014/12/Penang-Prawn-Mee-Wide.jpg?ssl=1"
+                    alt="Hokien Mee image">
+                <p class="image-source"><small>Image source: www.angsarap website</small></p>
+                <h3>Hokkien Mee</h3>
+                <p class="description">
+                    Penang Hokkien Mee, also known as prawn noodles, is a flavorful noodle soup dish characterized by
+                    its
+                    rich, prawn-based broth and a combination of yellow egg noodles and rice vermicelli.
+                </p>
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/Bne6xeECL4jGwqcu6">888 Hokkien Mee</a>
+                </div>
+                <button class="like-btn" data-food="Penang Hokkien Mee"
+                    data-img="https://i0.wp.com/www.angsarap.net/wp-content/uploads/2014/12/Penang-Prawn-Mee-Wide.jpg?ssl=1">❤️
+                    Like
+                    & Collect to Album
+                </button>
+
+            </div>
+
+            <div class="column">
+
+                <h3>White Curry Mee</h3>
+                <p class="description">
+                    Mix of yellow Hokkien wheat noodles and thin rice vermicelli is characterised by its trademark
+                    milky-white, salty-savoury soup. A standard bowl will be garnished with shrimps, blood cockles,
+                    strips
+                    of cuttlefish, and tofu puffs.
+                </p>
+                <img class="dish-image"
+                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHdjHXlXyEg9d4L32O8Psoil6GT-oOBOh7b1JykjvzGCBl3b22gCKg9YVOIcXRjc0xFCgC2fC-8zRy71I5RGF5qH9Psij8vtZa7iccWRS_zqS4DiY9L8h87eSiWsqiW13gs7AySkLANzThIz2X-YdKnSlLAoVnyFcrx27pEdrKr3X918QRosDsXX5LsNTn/s1600/IMG_8345.JPG"
+                    alt="White Curry Mee image">
+                <p class="image-source"><small>Image source: kenhuntfood website</small></p>
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/dAphjaPn7zcLzPGx7">Hot Bowl White Curry Mee</a>
+                </div>
+                <button class="like-btn" data-food="White Curry Mee"
+                    data-img="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHdjHXlXyEg9d4L32O8Psoil6GT-oOBOh7b1JykjvzGCBl3b22gCKg9YVOIcXRjc0xFCgC2fC-8zRy71I5RGF5qH9Psij8vtZa7iccWRS_zqS4DiY9L8h87eSiWsqiW13gs7AySkLANzThIz2X-YdKnSlLAoVnyFcrx27pEdrKr3X918QRosDsXX5LsNTn/s1600/IMG_8345.JPG">❤️
+                    Like
+                    & Collect to Album
+                </button>
+
+            </div>
+
+            <div class="column">
+
+                <img class="dish-image"
+                    src="https://chiefeater.com/wp-content/uploads/2025/04/zheng_xiang_yam_rice_mar2025_peteryeoh_01.jpg"
+                    alt="Yam Rice image">
+                <p class="image-source"><small>Image source: chiefeater website</small></p>
+                <h3>Yam Rice</h3>
+                <p class="description">
+                    Yam rice is known for its flavorful and hearty combination of yam (taro) and rice. Yam rice is often
+                    enjoyed on its own or paired with a savory soup, such as pork soup with pork offal, or a side of
+                    vegetables, creating a balanced and satisfying meal.
+                </p>
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/tuZdEBokcUM9gz2C6">BM Famous Yam Rice</a>
+                </div>
+                <button class="like-btn" data-food="Yam Rice"
+                    data-img="https://chiefeater.com/wp-content/uploads/2025/04/zheng_xiang_yam_rice_mar2025_peteryeoh_01.jpg">❤️
+                    Like
+                    & Collect to Album
+                </button>
+
+            </div>
+
+
+            <div class="column">
+
+                <div class="column">
+
+                    <h3>Oh Chien</h3>
+                    <p class="description">
+                        Fried Oyster Omelette, also known as "Oh Chien" by local comes with juicy, fresh oysters atop a
+                        bed
+                        of crispy yet sticky egg batter fried to perfection, this delicacy is guaranteed to please your
+                        taste buds, especially paired with the sour yet spicy chilli sauce.
+                    </p>
+                    <img class="dish-image"
+                        src="https://penangtourism.weebly.com/uploads/5/2/3/3/52338045/3281948_orig.jpg"
+                        alt="Oh Chien image">
+                    <p class="image-source"><small>Image source: penangtourism.weebly website</small></p>
+                    <div class="restaurant-info">
+                        <span class="restaurant-emoji">🍽️</span>
+                        <a href="https://maps.app.goo.gl/3Q6YgbeXGdxKBNhW8">Bee Hooi Coffee Shop</a>
+                    </div>
+                    <button class="like-btn" data-food="Oh Chien"
+                        data-img="https://penangtourism.weebly.com/uploads/5/2/3/3/52338045/3281948_orig.jpg">❤️ Like
+                        & Collect to Album
+                    </button>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- ===== Main Food Section ===== -->
+        <div class="sectionHeader">
+            <h2>Desserts & Snacks</h2>
+        </div>
+
+        <div class="row">
+
+            <div class="column">
+
+                <h3>Chendul</h3>
+                <img class="dish-image"
+                    src="https://images.deliveryhero.io/image/fd-my/Products/1531100051.jpg?width=%s"
+                    alt="Chendul image">
+                <p class="image-source"><small>Image source: deliveryhero website</small></p>
+                <p class="description">
+                    <br>Penang Chendul is a well-known, refreshing dessert, often described as a Malaysian iced treat.
+                    It's characterized by shaved ice, coconut milk, palm sugar (gula melaka), and green, worm-like jelly
+                    noodles made from rice flour.
+                </p>
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/u21WxEkHaK5b5H5u6">Penang Road Famous Teochew Chendul</a>
+                </div>
+                <button class="like-btn" data-food="Chendul"
+                    data-img="https://images.deliveryhero.io/image/fd-my/Products/1531100051.jpg?width=%s">❤️ Like
+                    & Collect to Album
+                </button>
+
+            </div>
+
+            <div class="column">
+
+                <h3>Tambun Biscuit</h3>
+                <img class="dish-image" src="https://penangfoodie.sgp1.digitaloceanspaces.com/2019/06/2.jpg"
+                    alt="Tambun Biscuit image">
+                <p class="image-source"><small>Image source: penangfoodie.sgp1.digitaloceanspaces website</small></p>
+                <p class="description">
+                    <br>Penang Tambun biscuits, also known as tau sar pneah, are a popular bite-sized, flaky pastry with
+                    a sweet or savory mung bean paste filling.
+                </p>
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/pmDbN22YZKXzS6E66">Him Heang Sdn Bhd</a>
+                </div>
+                <button class="like-btn" data-food="Tambun Biscuit"
+                    data-img="https://penangfoodie.sgp1.digitaloceanspaces.com/2019/06/2.jpg">❤️ Like
+                    & Collect to Album
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Search: script loads after the DOM is ready  -->
+        <!-- "No results" message -->
+        <p id="noResults" style="text-align:center; display:none; font-weight:bold; color:red;">
+            No results found.
+        </p>
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <h2>🔒 Login Required</h2>
+                <p>You must log in first to save items to your album!</p>
+                <button id="loginModalOkBtn">OK</button>
+            </div>
+        </div>
+
+        <!-- Logout Modal -->
+        <div id="logoutModal" class="modal">
+            <div class="modal-content">
+                <h2>Logged Out!</h2>
+                <p>You have successfully logged out. See you next time! 🍜</p>
+                <button id="modalOkBtn">OK</button>
+            </div>
+        </div>
+
+        <!-- Link external JS -->
+        <script src="ContentSearchFunc.js"></script>
+        <script src="AlbumFunc.js"></script>
+        <script src="cookies.js"></script>
+
+        <footer>
+            <p>&copy; ACKY Day Day Foddie. All rights reserved.</p>
+            <p>Some images are used for educational purposes only and are &copy; their respective copyright owners.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

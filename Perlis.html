@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Food in Perlis</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="cookies.css">
+    <link rel="stylesheet" href="ContentStyle.css">
+    <link rel="stylesheet" href="general.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!--Perlis Flag Favicon-->
+    <link rel="icon" type="image/png" href="https://i.pinimg.com/1200x/e8/67/65/e867658421cdb19d84d3c26feb24ca4e.jpg">
+
+    <!-- Define length of search bar -->
+    <style>
+        .search-container form {
+            width: 600px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== Cookies ===== -->
+    <div id="welcomeFormContainer">
+        <h2>🍛 Welcome to Malaysia Street Food!</h2>
+        <p>Enter your name to explore Malaysia Street Food:</p>
+        <!-- Name -->
+        <input type="text" id="usernameInput" placeholder="Your name">
+        <!-- Gmail -->
+        <input type="email" id="gmailInput" placeholder="Your Gmail (example@gmail.com)">
+        <button id="continueBtn"> Start Tasting! </button>
+        <br><br>
+        <button id="skipBtn" style="background:#555; color:white;">Skip for Now</button>
+    </div>
+
+    <!-- Actual Website (hidden until name is saved) -->
+    <div id="websiteContent" style="display:none;">
+
+        <!-- ===== HEADER ===== -->
+        <header>
+            <h1>About Malaysia Street Food</h1>
+            <p>Discover the flavors, stories, and culture behind every dish 🍜🌶️</p>
+        </header>
+
+        <!-- ===== NAVIGATION MENU ===== -->
+        <nav>
+            <ul class="nav-left">
+                <!-- Login / Logout button will be toggled with JS -->
+                <li><a href="index.html" id="authBtn">Login</a></li>
+            </ul>
+            <ul>
+                <!-- Navigation links -->
+                <li class="dropdown">
+                    <a href="index.html" class="active">Explore ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="Johor.html">Johor</a></li>
+                        <li><a href="Kedah.html">Kedah</a></li>
+                        <li><a href="Kelantan.html">Kelantan</a></li>
+                        <li><a href="Melaka.html">Melaka</a></li>
+                        <li><a href="Negeri Sembilan.html">Negeri Sembilan</a></li>
+                        <li><a href="Pahang.html">Pahang</a></li>
+                        <li><a href="Perak.html">Perak</a></li>
+                        <li><a href="Perlis.html">Perlis</a></li>
+                        <li><a href="Penang.html">Pulau Pinang</a></li>
+                        <li><a href="Selangor.html">Selangor</a></li>
+                        <li><a href="Terengganu.html">Terengganu</a></li>
+                        <li><a href="Sabah.html">Sabah</a></li>
+                        <li><a href="Sarawak.html">Sarawak</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Album.html">My Album</a></li>
+            </ul>
+
+            <!-- Social links aligned right -->
+            <ul class="nav-right">
+                <li><a href="https://facebook.com/sharer/sharer.php?u= https://hui0112-c.github.io/acky-daydayfoodie/" target="_blank"><i
+                            class="fab fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/intent/tweet?url= https://hui0112-c.github.io/acky-daydayfoodie/" target="_blank"><i
+                            class="fab fa-twitter"></i></a></li>
+                <li><a href="https://wa.me/?text=Check%20out%20this%20website:%20 https://hui0112-c.github.io/acky-daydayfoodie/"
+                        target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+        </nav>
+
+        <!-- Mentioned Perlis Page -->
+        <div class="pageTitle">
+
+            <h2>Explore Perlis Street Food</h2>
+
+            <!-- Search bar -->
+            <div class="search-container">
+                <form id="searchForm">
+                    <input type="text" placeholder="Search dishes/desserts/snacks..." name="search" id="searchInput">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+
+        </div>
+
+
+        <!-- ===== MAIN FOOD SECTION ===== -->
+        <div class="sectionHeader">
+            <h2>Main Dishes</h2>
+        </div>
+
+        <div class="row">
+
+            <div class="column">
+                <img class="dish-image"
+                    src="https://myhalalxplorer.com/wp-content/uploads/2024/10/image-552-768x1024.png"
+                    alt="Pulut Ayam Percik image">
+                <p class="image-source"><small>Image source: myhalalxplorer website</small></p>
+                <h3 class="foodName">Pulut Ayam Percik</h3>
+                <p class="description">
+                    Grilled chicken with spicy coconut gravy served with glutinous rice—often seen at pasar malam as a
+                    crowd-puller.
+                </p>
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/CxqtgMwqN7BWs9ib9">Sarah Pulut Ayam</a>
+                </div>
+                <button class="like-btn" data-food="Pulut Ayam Percik"
+                    data-img="https://myhalalxplorer.com/wp-content/uploads/2024/10/image-552-768x1024.png">❤️
+                    Like & Collect to Album
+                </button>
+            </div>
+
+            <div class="column">
+                <h3 class="foodName">Laksa Perlis</h3>
+                <p class="description">
+                    Laksa Perlis is different from other types of laksa. The gravy is more concentrated because
+                    ingredients
+                    like mackerel, sardine, torch ginger and laksa leaf are blended together.
+                </p>
+                <img class="dish-image"
+                    src="https://i0.wp.com/www.gayatravel.com.my/ver4/wp-content/uploads/2022/05/laksa-perlis.jpg?resize=640%2C426&ssl=1"
+                    alt="Laksa Perlis image">
+                <p class="image-source"><small>Image source: gayatravel website</small></p>
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/hGQCi1ToUn2U8Dpd9">Restaurant Kak Su Laksa</a>
+                </div>
+                <button class="like-btn" data-food="Laksa Perlis"
+                    data-img="https://i0.wp.com/www.gayatravel.com.my/ver4/wp-content/uploads/2022/05/laksa-perlis.jpg?resize=640%2C426&ssl=1">❤️
+                    Like & Collect to Album
+                </button>
+            </div>
+
+            <div class="column">
+                <img class="dish-image"
+                    src="https://i0.wp.com/www.gayatravel.com.my/ver4/wp-content/uploads/2022/05/mentarang.jpg?w=768&ssl=1"
+                    alt="Mentarang image">
+                <p class="image-source"><small>Image source: gayatravel webiste</small></p>
+                <h3 class="foodName">Mentarang</h3>
+                <p class="description">
+                    Mentarang is a type of seafood that is popular in Perlis. A favorite way to enjoy it is grilled
+                    (Mentarang Bakar), often paired with tangy tamarind sauce.
+                </p>
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/iPjwZiy666MmPCE86">Pakjang Lee Mentarang Perlis</a>
+                </div>
+                <button class="like-btn" data-food="Mentarang"
+                    data-img="https://i0.wp.com/www.gayatravel.com.my/ver4/wp-content/uploads/2022/05/mentarang.jpg?w=768&ssl=1">❤️
+                    Like & Collect to Album
+                </button>
+            </div>
+
+            <div class="column">
+                <h3 class="foodName">Nasi Ulam</h3>
+                <p class="description">
+                    Nasi ulam is a healthy traditional recipe made from rice mixed with ulam (local salad) like
+                    lemongrass,
+                    ginger, shallots and various herbs, giving it a refreshing and aromatic taste.
+                </p>
+                <img class="dish-image"
+                    src="https://i0.wp.com/www.gayatravel.com.my/ver4/wp-content/uploads/2022/05/nasi-ulam.jpg?w=640&ssl=1"
+                    alt="Nasi Ulam image">
+                <p class="image-source"><small>Image source: gayatravel website</small></p>
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/TWSrD9TWZavvtmet8">Restoran Anjung Keli</a>
+                </div>
+                <button class="like-btn" data-food="Nasi Ulam"
+                    data-img="https://i0.wp.com/www.gayatravel.com.my/ver4/wp-content/uploads/2022/05/nasi-ulam.jpg?w=640&ssl=1">❤️
+                    Like & Collect to Album
+                </button>
+            </div>
+
+            <div class="column">
+                <img class="dish-image" src="https://geopark.perlis.gov.my/wp-content/uploads/2023/08/pekasam-puyu.jpg"
+                    alt="Pekasam Puyu image">
+                <p class="image-source"><small>Image source: geopark.perlis website</small></p>
+                <h3 class="foodName">Pekasam Puyu</h3>
+                <p class="description">
+                    Pekasam puyu is a freshwater fish preserved with salt and left to ferment, giving it a unique tangy
+                    and
+                    savory flavor. It is often fried and eaten with rice as a beloved Perlis specialty.
+                </p>
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/QvNEvMjGCSEKuveNA">Pekasam Daging Perlis</a>
+                </div>
+                <button class="like-btn" data-food="Pekasam Puyu"
+                    data-img="https://geopark.perlis.gov.my/wp-content/uploads/2023/08/pekasam-puyu.jpg">❤️
+                    Like & Collect to Album
+                </button>
+            </div>
+
+        </div>
+
+
+        <!-- ===== DESSERT SECTION ===== -->
+        <div class="sectionHeader">
+            <h2>Desserts & Snacks</h2>
+        </div>
+
+        <div class="row">
+
+            <div class="column">
+                <h3 class="foodName">Kuih Dangai</h3>
+                <img class="dish-image" src="https://ikanmas.in/wp-content/uploads/2023/08/KuihDangai-4-768x739.jpg"
+                    alt="Kuih Dangai image">
+                <p class="image-source"><small>Image source: ikanmas.in website</small></p>
+                <p class="description">
+                    Kuih Dangai is a chewy, coconut-filled traditional snack baked until golden, offering a sweet and
+                    smoky
+                    flavor in every bite.
+                </p>
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/9q2jsUrVr2aEfVw17">Dangai Market Kangar</a>
+                </div>
+                <button class="like-btn" data-food="Kuih Dangai"
+                    data-img="https://ikanmas.in/wp-content/uploads/2023/08/KuihDangai-4-768x739.jpg">❤️
+                    Like & Collect to Album
+                </button>
+            </div>
+
+            <div class="column">
+                <h3 class="foodName">Pulut Mempelam</h3>
+                <img class="dish-image" src="https://munchmalaysia.com/wp-content/uploads/2024/08/pulut-harum-manis.jpg"
+                    alt="Pulut Mempelam image">
+                <p class="image-source"><small>Image source: munchmalaysia website</small></p>
+                <p class="description">
+                    A sticky rice dessert paired with sweet coconut milk and mango slices, offering a delightful mix of
+                    creamy, sweet, and tangy flavors.
+                </p>
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/G8hcsu38SbDdqkwT8">Perusahaan Abdullah Sekeluarga</a>
+                </div>
+                <button class="like-btn" data-food="Pulut Mempelam"
+                    data-img="https://munchmalaysia.com/wp-content/uploads/2024/08/pulut-harum-manis.jpg">❤️
+                    Like & Collect to Album
+                </button>
+            </div>
+
+            <div class="column">
+                <h3 class="foodName">Kuih Karas</h3>
+                <img class="dish-image"
+                    src="https://i.ytimg.com/vi/bMU_LBiv02k/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAt2lTZUG7B_X4j9qFMXZdgU1Y-lA"
+                    alt="Kuih Karas image">
+                <p class="image-source"><small>Image source: i.ytimg website</small></p>
+                <p class="description">
+                    Kuih Karas is a crunchy, net-like sweet snack made from rice flour, loved for its light texture and
+                    caramelized taste.
+                </p>
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/4zMiFZJPEQ2actoN6">Azura Johari Kuih Karas</a>
+                </div>
+                <button class="like-btn" data-food="Kuih Karas"
+                    data-img="https://i.ytimg.com/vi/bMU_LBiv02k/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAt2lTZUG7B_X4j9qFMXZdgU1Y-lA">❤️
+                    Like & Collect to Album
+                </button>
+            </div>
+
+        </div>
+
+
+        <!-- Search: script loads after the DOM is ready -->
+        <p id="noResults" style="text-align:center; display:none; font-weight:bold; color:red;">
+            No results found.
+        </p>
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <h2>🔒 Login Required</h2>
+                <p>You must log in first to save items to your album!</p>
+                <button id="loginModalOkBtn">OK</button>
+            </div>
+        </div>
+
+        <!-- Logout Modal -->
+        <div id="logoutModal" class="modal">
+            <div class="modal-content">
+                <h2>Logged Out!</h2>
+                <p>You have successfully logged out. See you next time! 🍜</p>
+                <button id="modalOkBtn">OK</button>
+            </div>
+        </div>
+
+        <script src="ContentSearchFunc.js"></script>
+        <script src="AlbumFunc.js"></script>
+        <script src="cookies.js"></script>
+
+        <footer>
+            <p>&copy; ACKY Day Day Foddie. All rights reserved.</p>
+            <p>Some images are used for educational purposes only and are &copy; their respective copyright owners.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

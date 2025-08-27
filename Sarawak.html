@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Food in Sarawak</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="cookies.css">
+    <link rel="stylesheet" href="ContentStyle.css">
+    <link rel="stylesheet" href="general.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!--Sarawak Flag Favicon-->
+    <link rel="icon" type="image/png" href="https://i.pinimg.com/736x/86/85/f3/8685f3ec6ff93365c9683a8b5bebb06b.jpg">
+
+    <!-- Define length of search bar -->
+    <style>
+        .search-container form {
+            width: 600px;
+            margin-bottom: 30px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- ===== Cookies ===== -->
+    <div id="welcomeFormContainer">
+        <h2>🍛 Welcome to Malaysia Street Food!</h2>
+        <p>Enter your name to explore Malaysia Street Food:</p>
+        <!-- Name -->
+        <input type="text" id="usernameInput" placeholder="Your name">
+        <!-- Gmail -->
+        <input type="email" id="gmailInput" placeholder="Your Gmail (example@gmail.com)">
+        <button id="continueBtn"> Start Tasting! </button>
+        <br><br>
+        <button id="skipBtn" style="background:#555; color:white;">Skip for Now</button>
+    </div>
+
+    <!-- Actual Website (hidden until name is saved) -->
+    <div id="websiteContent" style="display:none;">
+
+        <!-- ===== HEADER ===== -->
+        <header>
+            <h1>About Malaysia Street Food</h1>
+            <p>Discover the flavors, stories, and culture behind every dish 🍜🌶️</p>
+        </header>
+
+        <!-- ===== NAVIGATION MENU ===== -->
+        <nav>
+            <ul class="nav-left">
+                <!-- Login / Logout button will be toggled with JS -->
+                <li><a href="index.html" id="authBtn">Login</a></li>
+            </ul>
+            <ul>
+                <!-- Navigation links -->
+                <li class="dropdown">
+                    <a href="index.html" class="active">Explore ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="Johor.html">Johor</a></li>
+                        <li><a href="Kedah.html">Kedah</a></li>
+                        <li><a href="Kelantan.html">Kelantan</a></li>
+                        <li><a href="Melaka.html">Melaka</a></li>
+                        <li><a href="Negeri Sembilan.html">Negeri Sembilan</a></li>
+                        <li><a href="Pahang.html">Pahang</a></li>
+                        <li><a href="Perak.html">Perak</a></li>
+                        <li><a href="Perlis.html">Perlis</a></li>
+                        <li><a href="Penang.html">Pulau Pinang</a></li>
+                        <li><a href="Selangor.html">Selangor</a></li>
+                        <li><a href="Terengganu.html">Terengganu</a></li>
+                        <li><a href="Sabah.html">Sabah</a></li>
+                        <li><a href="Sarawak.html">Sarawak</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Album.html">My Album</a></li>
+            </ul>
+
+            <!-- Social links aligned right -->
+            <ul class="nav-right">
+                <li><a href="https://facebook.com/sharer/sharer.php?u= https://hui0112-c.github.io/acky-daydayfoodie/" target="_blank"><i
+                            class="fab fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/intent/tweet?url= https://hui0112-c.github.io/acky-daydayfoodie/" target="_blank"><i
+                            class="fab fa-twitter"></i></a></li>
+                <li><a href="https://wa.me/?text=Check%20out%20this%20website:%20 https://hui0112-c.github.io/acky-daydayfoodie/"
+                        target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+        </nav>
+
+
+        <!-- Mentioned Sarawak Page-->
+        <div class="pageTitle">
+
+            <h2>Explore Sarawak Street Food</h2>
+
+            <!-- Search bar -->
+            <div class="search-container">
+                <form id="searchForm">
+                    <input type="text" placeholder="Search dishes/desserts/snacks..." name="search" id="searchInput">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- ===== MAIN FOOD SECTION ===== -->
+        <div class="sectionHeader">
+            <h2>Main Dishes</h2>
+        </div>
+
+        <div class="row">
+
+            <div class="column">
+
+                <img class="dish-image" src="https://www.businesstoday.com.my/wp-content/uploads/2021/08/dabai.jpg"
+                    alt="Dabai Fried Rice image">
+
+                <p class="image-source"><small>Image source: BusinessToday Website</small></p>
+
+                <h3 class="foodName">Dabai Fried Rice</h3>
+
+                <p class="description">
+                    Dabai Fried Rice is a special Sarawakian fried rice made with dabai, a local seasonal fruit also
+                    known
+                    as the “Sarawak olive.” The dabai gives the fried rice a unique creamy texture and rich, slightly
+                    nutty
+                    flavor. This dish is loved for its distinctive taste that can only be found in Sarawak.
+                </p>
+
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/EX5kWwSazrdznKG59">Kedai Kopi Chong Choon</a>
+                </div>
+
+                <button class="like-btn" data-food="Dabai Fried Rice"
+                    data-img="https://www.businesstoday.com.my/wp-content/uploads/2021/08/dabai.jpg">❤️ Like & Collect
+                    to
+                    Album
+                </button>
+
+
+            </div>
+
+            <div class="column">
+
+                <h3 class="foodName">Kolo Mee</h3>
+
+                <p class="description">
+                    Kolo Mee is a famous Sarawak noodle dish, especially popular in Kuching. It features springy egg
+                    noodles
+                    tossed in light sauce and oil. It usually topped with minced pork, char siu (barbecued pork) and
+                    green
+                    onions. The dish is loved for its fragrant aroma, chewy texture and savory-sweet taste.
+                </p>
+
+                <img class="dish-image" src="https://images.deliveryhero.io/image/fd-my/LH/s3mk-listing.jpg"
+                    alt="Kampua image">
+
+                <p class="image-source"><small>Image source: Man Yuan Cafe's post on Facebook</small></p>
+
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/dgTauRLJ4oDV9ir89">Restoran Chong Yang</a>
+                </div>
+
+                <button class="like-btn" data-food="Kolo Mee"
+                    data-img="https://images.deliveryhero.io/image/fd-my/LH/s3mk-listing.jpg">❤️ Like & Collect to Album
+                </button>
+
+            </div>
+
+            <div class="column">
+
+                <img class="dish-image"
+                    src="https://thumbs.dreamstime.com/b/special-kampua-mee-sarawak-kampua-mee-as-called-sarawak-most-popular-sibu-sarawak-very-delicious-consists-148422928.jpg"
+                    alt="Kampua image">
+
+                <p class="image-source"><small>Image source: Dreamstime Website</small></p>
+
+                <h3 class="foodName">Kampua Mee</h3>
+
+                <p class="description">
+                    Kampua Mee is a traditional noodle dish from Sarawak, especially popular in Sibu. It features
+                    springy
+                    noodles tossed in lard or oil, soy sauce and shallot oil, then topped with slices of pork and green
+                    onions. The dish is loved for its simplicity, fragrant aroma and comforting taste.
+                </p>
+
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/i3Qs77qZvT3j16cV9">AHA Kampua Mee</a>
+                </div>
+
+                <button class="like-btn" data-food="Bubur Kuali"
+                    data-img="https://thumbs.dreamstime.com/b/special-kampua-mee-sarawak-kampua-mee-as-called-sarawak-most-popular-sibu-sarawak-very-delicious-consists-148422928.jpg">❤️
+                    Like & Collect to Album
+                </button>
+
+
+            </div>
+
+            <div class="column">
+
+                <h3 class="foodName">Prawn Tomyam Noodle</h3>
+
+                <p class="description">
+                    Prawn Tomyam Noodle is a spicy-sour noodle dish inspired by Thai cuisine and popular in Malaysia.
+                    It
+                    features noodles served in a tangy broth made from lemongrass, lime, chili, herbs and prawns as the
+                    main
+                    highlight. The soup is loved for its bold, refreshing flavors that combine sourness, spiciness and
+                    savory richness.
+                </p>
+
+                <img class="dish-image"
+                    src="https://preview.redd.it/dkzf9grlsfw81.jpg?width=1080&crop=smart&auto=webp&s=4b4aa2d26c7fc56a5a719e476e72ef632769d058"
+                    alt="Prawn Tomyam Noodle image">
+
+                <p class="image-source"><small>Image source: Reddit Website</small></p>
+
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/wA1Bf6DxowWe3NJp6">Kedai Kopi Glory Udang Tomyam Kelapa</a>
+                </div>
+
+                <button class="like-btn" data-food="Prawn Tomyam Noodle"
+                    data-img="https://preview.redd.it/dkzf9grlsfw81.jpg?width=1080&crop=smart&auto=webp&s=4b4aa2d26c7fc56a5a719e476e72ef632769d058">❤️
+                    Like & Collect to Album
+                </button>
+
+            </div>
+
+            <div class="column">
+
+                <img class="dish-image" src="https://ikanmas.in/wp-content/uploads/2022/06/tomatokueyteow3.jpg"
+                    alt="Tomato Kueh Tiaw image">
+
+                <p class="image-source"><small>Image source: ikanmas.in Website</small></p>
+
+                <h3 class="foodName">Tomato Kueh Tiaw</h3>
+
+                <p class="description">
+                    Tomato Kueh Tiaw is a noodle dish popular in Sarawak, especially in Kuching. Unlike the Penang-style
+                    Kueh
+                    Tiaw, this version is made with flat rice noodles stir-fried in a sweet and tangy tomato-based
+                    sauce. It
+                    is usually served with chicken, seafood, and vegetables, making it both flavorful and comforting.
+                </p>
+
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/Wsb2RSaFDzazYxaeA">Tomato Mee Kampung Stampin Baru</a>
+                </div>
+
+                <button class="like-btn" data-food="Tomato Kueh Tiaw"
+                    data-img="https://ikanmas.in/wp-content/uploads/2022/06/tomatokueyteow3.jpg">❤️ Like & Collect to
+                    Album
+                </button>
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+        <!-- ===== DESSERT SECTION ===== -->
+        <div class="sectionHeader">
+            <h2>Desserts & Snacks</h2>
+        </div>
+
+        <div class="row">
+
+            <div class="column">
+
+                <h3 class="foodName">Layered Cake</h3>
+
+                <img class="dish-image" src="https://munchmalaysia.com/wp-content/uploads/2023/07/kek-Lapis.jpg"
+                    alt="Layered Cake image">
+
+                <p class="image-source"><small>Image source: F&Life Website</small></p>
+
+                <p class="description">
+                    <br>Layered Cake also known as Kek Lapis. It is made by baking thin layers of cake stacked together.
+                    Unlike
+                    the Indonesian version, Sarawak's Kek Lapis is famous for its bright colors and creative
+                    patterns. It often flavored with pandan, chocolate or vanilla to make it both delicious and visually
+                    stunning.
+                </p>
+
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/B5kAetB18LpA7chR8">Kek Lapis Warisan Sdn Bhd</a>
+                </div>
+
+                <button class="like-btn" data-food="Layered Cake"
+                    data-img="https://munchmalaysia.com/wp-content/uploads/2023/07/kek-Lapis.jpg">❤️ Like & Collect to
+                    Album
+                </button>
+
+
+            </div>
+
+
+            <div class="column">
+
+                <!--Food Name-->
+                <h3 class="foodName">Kuih Celorot</h3>
+
+                <!--The image of food-->
+                <img class="dish-image"
+                    src="https://wadd.asia/upload/article//2b92dcbf58a897b2fb7f77d4ea5a67fd1600909862.png"
+                    alt="Kuih Celorot image">
+
+                <!--Mentioned the copyright of image-->
+                <p class="image-source"><small>Image source: wadd.asia Website</small></p>
+
+                <!--Introduce to this street food-->
+                <p class="description">
+                    <br>Kuih Celorot is a dessert made from rice flour, coconut milk and palm sugar. It
+                    wrapped in young coconut leaves shaped like a cone. The kuih has a soft and creamy texture with a
+                    fragrant taste.
+                </p>
+
+                <!--Recommended Restaurant-->
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <p>Commonly found at night markets</p>
+                </div>
+
+                <button class="like-btn" data-food="Kuih Celorot"
+                    data-img="https://wadd.asia/upload/article//2b92dcbf58a897b2fb7f77d4ea5a67fd1600909862.png">❤️ Like
+                    &
+                    Collect to Album
+                </button>
+
+
+            </div>
+
+            <div class="column">
+
+                <!--Food Name-->
+                <h3 class="foodName">Bubur Kuali</h3>
+
+                <!--The image of food-->
+                <img class="dish-image"
+                    src="https://newappaz.oss-cn-hongkong.aliyuncs.com/wherein_images/post/20190123/edd8b2ce0fd44275a4e6d2500c24487b.jpg"
+                    alt="Bubur Kuali image">
+
+                <!--Mentioned the copyright of image-->
+                <p class="image-source"><small>Image source: Jordannn's post on Facebook</small></p>
+
+                <!--Introduce to this street food-->
+                <p class="description">
+                    <br>Bubur Kuali is a traditional dessert made by slow-cooking rice flour and coconut milk in a large
+                    wok. It
+                    has a thick, creamy texture and is sweetened with palm sugar. The dessert is loved for its rich,
+                    fragrant and comforting flavor.
+                </p>
+
+                <!--Recommended Restaurant-->
+                <div class="restaurant-info">
+                    <span class="restaurant-emoji">🍽️</span>
+                    <a href="https://maps.app.goo.gl/Gbx4WkuoBd4BQqg16">Treasure Land</a>
+                </div>
+
+                <!-- button and Save it into album-->
+                <button class="like-btn" data-food="Bubur Kuali"
+                    data-img="https://newappaz.oss-cn-hongkong.aliyuncs.com/wherein_images/post/20190123/edd8b2ce0fd44275a4e6d2500c24487b.jpg">❤️
+                    Like & Collect to Album
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- Search: script loads after the DOM is ready  -->
+        <!--   "No results" message -->
+        <p id="noResults" style="text-align:center; display:none; font-weight:bold; color:red;">
+            No results found.
+        </p>
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <h2>🔒 Login Required</h2>
+                <p>You must log in first to save items to your album!</p>
+                <button id="loginModalOkBtn">OK</button>
+            </div>
+        </div>
+
+        <!-- Logout Modal -->
+        <div id="logoutModal" class="modal">
+            <div class="modal-content">
+                <h2>Logged Out!</h2>
+                <p>You have successfully logged out. See you next time! 🍜</p>
+                <button id="modalOkBtn">OK</button>
+            </div>
+        </div>
+
+        <!-- Link external JS -->
+        <script src="ContentSearchFunc.js"></script>
+        <script src="AlbumFunc.js"></script>
+        <script src="cookies.js"></script>
+
+        <footer>
+            <p>&copy; ACKY Day Day Foddie. All rights reserved.</p>
+            <p>Some images are used for educational purposes only and are &copy; their respective copyright owners.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
