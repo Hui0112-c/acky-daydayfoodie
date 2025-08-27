@@ -67,6 +67,40 @@
         background: #e60000;
     }
 
+    #removeConfirmModal .modal-content {
+        background: linear-gradient(135deg, #ff9966, #ff5e62);
+        color: white;
+    }
+
+    #removeConfirmYes,
+    #removeConfirmCancel {
+        padding: clamp(8px, 2vw, 12px) clamp(15px, 3vw, 25px);
+        border: none;
+        border-radius: clamp(5px, 1vw, 6px);
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    #removeConfirmYes {
+        background: #ffcc66;
+        color: #333;
+    }
+
+    #removeConfirmYes:hover {
+        background: #ffb84d;
+    }
+
+    #removeConfirmCancel {
+        background: #fff;
+        color: #333;
+    }
+
+    #removeConfirmCancel:hover {
+        background: #f0f0f0;
+    }
+
+
     /* Responsive adjustments */
     @media screen and (max-width: 600px) {
         #albumList {
@@ -103,11 +137,12 @@
         <button id="skipBtn" style="background:#555; color:white;">Skip for Now</button>
     </div>
 
+
+    <!-- Notification Box -->
+    <div id="notification" class="notification"></div>
+
     <!-- Actual Website (hidden until name is saved) -->
     <div id="websiteContent" style="display:none;">
-
-        <!-- Notification Box -->
-        <div id="notification" class="notification"></div>
 
         <!-- ===== HEADER ===== -->
         <header>
@@ -149,10 +184,10 @@
 
             <!-- Social links aligned right -->
             <ul class="nav-right">
-                <li><a href="https://facebook.com/sharer/sharer.php?u= https://hui0112-c.github.io/acky-daydayfoodie/" target="_blank"><i
-                            class="fab fa-facebook"></i></a></li>
-                <li><a href="https://twitter.com/intent/tweet?url= https://hui0112-c.github.io/acky-daydayfoodie/" target="_blank"><i
-                            class="fab fa-twitter"></i></a></li>
+                <li><a href="https://facebook.com/sharer/sharer.php?u= https://hui0112-c.github.io/acky-daydayfoodie/"
+                        target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/intent/tweet?url= https://hui0112-c.github.io/acky-daydayfoodie/"
+                        target="_blank"><i class="fab fa-twitter"></i></a></li>
                 <li><a href="https://wa.me/?text=Check%20out%20this%20website:%20 https://hui0112-c.github.io/acky-daydayfoodie/"
                         target="_blank"><i class="fab fa-whatsapp"></i></a></li>
             </ul>
@@ -170,6 +205,19 @@
             <p>Some images are used for educational purposes only and are &copy; their respective copyright owners.</p>
         </footer>
     </div>
+
+    <!-- Remove Confirmation Modal -->
+    <div id="removeConfirmModal" class="modal">
+        <div class="modal-content">
+            <h2>🗑️ Remove from Album?</h2>
+            <p>Are you sure you want to remove this item from your album? You can always add it back later. 😊</p>
+            <div style="display: flex; justify-content: center; gap: 15px; margin-top: 15px;">
+                <button id="removeConfirmYes">Yes, Remove</button>
+                <button id="removeConfirmCancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Login Modal -->
     <div id="loginModal" class="modal">
@@ -194,7 +242,4 @@
     <script src="AlbumFunc.js"></script>
 </body>
 
-
 </html>
-
-
