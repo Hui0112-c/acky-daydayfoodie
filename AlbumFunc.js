@@ -6,7 +6,7 @@
 function isLoggedIn() {
   return (
     (sessionStorage.getItem("username") || getCookie("username")) &&
-    (sessionStorage.getItem("gmail") || getCookie("gmail"))
+    (sessionStorage.getItem("email") || getCookie("email"))
   );
 }
 
@@ -54,12 +54,17 @@ function loadAlbum() {
     const caption = document.createElement("p");
     caption.textContent = item.name;
 
+    const restaurantInfo = document.createElement("p");
+    restaurantInfo.className = "restaurant-info";
+    restaurantInfo.innerHTML = item.restaurant; // use innerHTML to render <a> links
+
     const removeBtn = document.createElement("button");
     removeBtn.innerHTML = '<i class="fas fa-trash-alt"></i> Remove';
     removeBtn.className = "remove-btn";
 
     li.appendChild(img);
     li.appendChild(caption);
+    li.appendChild(restaurantInfo); // append restaurant info
     li.appendChild(removeBtn);
     list.appendChild(li);
   });
@@ -122,9 +127,27 @@ window.addEventListener("DOMContentLoaded", () => {
       const food = btn.getAttribute("data-food");
       const img = btn.getAttribute("data-img");
 
+      // Grab restaurant info from nearby .restaurant-info element
+      const restaurantEl = btn.closest(".column").querySelector(".restaurant-info");
+      let restaurant = "";
+      if (restaurantEl) {
+        const emojiSpan = restaurantEl.querySelector(".restaurant-emoji");
+        const linkEl = restaurantEl.querySelector("a");
+        const textEl = restaurantEl.querySelector("p");
+
+        // Include emoji + linked name or plain text
+        if (linkEl) {
+          restaurant = `${emojiSpan ? emojiSpan.textContent : ""} <a href="${linkEl.href}" target="_blank">${linkEl.textContent}</a>`;
+        } else if (textEl) {
+          restaurant = `${emojiSpan ? emojiSpan.textContent : ""} ${textEl.textContent}`;
+        } else {
+          restaurant = restaurantEl.textContent.trim();
+        }
+      }
+
       let album = getUserAlbum();
       if (!album.some(item => item.name === food)) {
-        album.push({ name: food, img: img });
+        album.push({ name: food, img: img, restaurant: restaurant });
         saveUserAlbum(album);
         // Success
         showNotification("❤️ " + food + " added to your album!", 3500, "success");
