@@ -13,15 +13,19 @@ function isLoggedIn() {
 // Get current user’s album
 function getUserAlbum() {
   const username = sessionStorage.getItem("username") || getCookie("username");
-  if (!username) return [];
-  return JSON.parse(localStorage.getItem(username + "_album")) || [];
+  const email = sessionStorage.getItem("email") || getCookie("email");
+  if (!username || !email) return [];
+  const key = username + "_" + email + "_album"; // composite key
+  return JSON.parse(localStorage.getItem(key)) || [];
 }
 
 // Save album
 function saveUserAlbum(album) {
   const username = sessionStorage.getItem("username") || getCookie("username");
-  if (!username) return;
-  localStorage.setItem(username + "_album", JSON.stringify(album));
+  const email = sessionStorage.getItem("email") || getCookie("email");
+  if (!username || !email) return;
+  const key = username + "_" + email + "_album"; // composite key
+  localStorage.setItem(key, JSON.stringify(album));
 }
 
 // Clear album UI
