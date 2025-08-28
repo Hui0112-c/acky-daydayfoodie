@@ -44,11 +44,3 @@ form.addEventListener('submit', function (e) {
   }
 
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-  let lastSearch = sessionStorage.getItem("lastSearch");
-  if (lastSearch) {
-    input.value = lastSearch;
-    form.dispatchEvent(new Event("submit")); // re-use your submit handler
-  }
-});
