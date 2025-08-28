@@ -100,7 +100,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
       if (!isLoggedIn()) {
         // Save desired page to redirect after login
-        localStorage.setItem("redirectAfterLogin", "album.html");
+        localStorage.setItem("redirectAfterLogin", "Album.html");
 
         // Show login modal
         if (loginModal) loginModal.style.display = "flex";
@@ -108,7 +108,7 @@ window.addEventListener("DOMContentLoaded", () => {
       }
 
       // If logged in → navigate to album.html
-      window.location.href = "album.html";
+      window.location.href = "Album.html";
     });
   }
 
@@ -239,6 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
     itemToRemove = null;
   };
 });
+
 
 
 
